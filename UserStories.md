@@ -1,7 +1,6 @@
+### Employé :Cas avec plusieurs employé
 
-Employé :Cas avec plusieurs employé
-
-Sandrine 23 ans, employée chez la TanchouIndustries doit voir les applications auxquelles elle a accès afin de savoir quels services sont disponibles pour elle.
+1.Sandrine 23 ans, employée chez la TanchouIndustries doit voir les applications auxquelles elle a accès afin de savoir quels services sont disponibles pour elle.
 
 
 
