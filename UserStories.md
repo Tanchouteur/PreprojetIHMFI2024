@@ -1,3 +1,17 @@
+### Contexte 
+
+Les personnes utilisant l’application sont forcément authentifiées et leur mail connu. Les
+notifications sont par mail via des messages automatiques adaptés qui permet de revenir dans
+l’application au bon endroit. Ces aspects ne sont pas à traiter.
+Une entreprise de 600 salariés propose à ces derniers des applications (environ 50) via un
+portail web selon leur poste, avec une évolution fréquente des accès, et une évolution du nombre
+d’applications.
+La DSI met en place l’applicatif ETROP permettant de faciliter les accès et les droits des
+utilisateurs de manière centralisée et efficace.
+
+
+
+
 ### Employé :Cas avec plusieurs employé
 
 1. Sandrine 23 ans, employée chez la TanchouIndustries doit voir les applications auxquelles elle a accès afin de savoir quels services sont disponibles pour elle.
