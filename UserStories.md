@@ -1,16 +1,16 @@
 ### Employé :Cas avec plusieurs employé
 
-1.Sandrine 23 ans, employée chez la TanchouIndustries doit voir les applications auxquelles elle a accès afin de savoir quels services sont disponibles pour elle.
+1. Sandrine 23 ans, employée chez la TanchouIndustries doit voir les applications auxquelles elle a accès afin de savoir quels services sont disponibles pour elle.
 
 
 
-Tom 45 ans , employée chez la TanchouIndustries, doit pouvoir demander à son manager d'attribuer plus ou moins de droits sur une application afin d'accèder aux fonctionnalités nécessaires.
+2. Tom 45 ans , employée chez la TanchouIndustries, doit pouvoir demander à son manager d'attribuer plus ou moins de droits sur une application afin d'accèder aux fonctionnalités nécessaires.
 
-Alphonse 36 ans , employée chez la TanchouIndustries doit recevoir une notification avec une explication en cas de refus de sa demande de droits afin de comprendre les raisons de la décision.
+3. Alphonse 36 ans , employée chez la TanchouIndustries doit recevoir une notification avec une explication en cas de refus de sa demande de droits afin de comprendre les raisons de la décision.
 
-Brigitte 29 ans , employée chez la TanchouIndustries veux une interface intuitive et simple d'utilisation afin de pouvoir naviguer et utiliser l'application sans difficulté.
+4. Brigitte 29 ans , employée chez la TanchouIndustries veux une interface intuitive et simple d'utilisation afin de pouvoir naviguer et utiliser l'application sans difficulté.
 
-Benjamin 55 ans , doit pouvoir accéder à un menu principal qui lui permet de lancer les différentes applications auxquelles il a  accès afin de naviguer facilement.
+5. Benjamin 55 ans , doit pouvoir accéder à un menu principal qui lui permet de lancer les différentes applications auxquelles il a  accès afin de naviguer facilement.
 
 
 Manager : 
