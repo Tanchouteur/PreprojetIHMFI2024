@@ -15,15 +15,15 @@
 
 ### Manager : 
 
-Axel 39 ans ,doit pouvoir attribuer un profil type à un employé pour une application afin de faciliter la gestion des droits d'accès.
+1. Axel 39 ans ,doit pouvoir attribuer un profil type à un employé pour une application afin de faciliter la gestion des droits d'accès.
 
-Il peux définir une date de révocation automatique des droits pour chaque employé afin qu'il puisse gérer l'expiration des accès de manière automatisée.
+2. Il peux définir une date de révocation automatique des droits pour chaque employé afin qu'il puisse gérer l'expiration des accès de manière automatisée.
 
 ### __Administrateur système__ ;
 
-Melanchon 39 ans , doit pouvoir gérer et modifier les profils types pour une application afin de maintenir une configuration adaptée aux besoins.
+1. Melanchon 39 ans , doit pouvoir gérer et modifier les profils types pour une application afin de maintenir une configuration adaptée aux besoins.
 
-Il doit  pouvoir éditer les droits d'un employé sur une application afin de lui donner plus ou moins de droits qu'un profil type.
+2. Il doit  pouvoir éditer les droits d'un employé sur une application afin de lui donner plus ou moins de droits qu'un profil type.
 
 
 
