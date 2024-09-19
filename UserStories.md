@@ -1,10 +1,11 @@
 
-
 Employé :Cas avec plusieurs employé
 
-Sandrine 23 ans, employée chez la TanchouIndustries doit voir les applications auquelles elle a accès afin de savoir quels services sont disponibles pour elle.
+Sandrine 23 ans, employée chez la TanchouIndustries doit voir les applications auxquelles elle a accès afin de savoir quels services sont disponibles pour elle.
 
-Tom 45 ans , employée chez la TanchouIndustries, doit pouvoir demander à son manager d' attribuer plus ou moins de droits sur une application afin d'accèder aux fonctionnalités nécessaires.
+
+
+Tom 45 ans , employée chez la TanchouIndustries, doit pouvoir demander à son manager d'attribuer plus ou moins de droits sur une application afin d'accèder aux fonctionnalités nécessaires.
 
 Alphonse 36 ans , employée chez la TanchouIndustries doit recevoir une notification avec une explication en cas de refus de sa demande de droits afin de comprendre les raisons de la décision.
 
