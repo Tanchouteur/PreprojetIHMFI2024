@@ -13,13 +13,13 @@
 5. Benjamin 55 ans , doit pouvoir accéder à un menu principal qui lui permet de lancer les différentes applications auxquelles il a  accès afin de naviguer facilement.
 
 
-Manager : 
+### Manager : 
 
 Axel 39 ans ,doit pouvoir attribuer un profil type à un employé pour une application afin de faciliter la gestion des droits d'accès.
 
 Il peux définir une date de révocation automatique des droits pour chaque employé afin qu'il puisse gérer l'expiration des accès de manière automatisée.
 
-Administrateur système ;
+### __Administrateur système__ ;
 
 Melanchon 39 ans , doit pouvoir gérer et modifier les profils types pour une application afin de maintenir une configuration adaptée aux besoins.
 
