@@ -10,6 +10,12 @@ La DSI met en place l’applicatif ETROP permettant de faciliter les accès et l
 utilisateurs de manière centralisée et efficace.
 
 
+Option ;
+Traduction anglais;
+Responsive telephone / tablette
+tableur /
+
+
 
 
 ### Employé :Cas avec plusieurs employé
