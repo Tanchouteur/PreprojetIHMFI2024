@@ -36,11 +36,11 @@ Modification de Admin
 |-----------------------------------------------|--------------------------|----------------------------------|------------------------------------|------------------------------------------|
 | Accès à une application                       | Oui                      | Oui                              | Oui                                | Date configurable ou vide                |
 | Lire les accès dont il dispose                | Oui                      | Oui                              | Oui                                | Vide                                     |
-| Demander plus ou moins de droits              | Oui                      | Peut accorder ou refuser         | Peut gérer tous les accès          | Date configurable (selon la demande)     |
-| Expliquer sa demande d'augmentation de droits | Oui                      | Oui                              | Oui                                | Date configurable                        |
+| Demander plus ou moins de droits              | Oui                      | Peut accorder ou refuser         | Non         | Date configurable (selon la demande)     |
+| Expliquer sa demande d'augmentation de droits | Oui                      | Oui                              | Non                              | Date configurable                        |
 | Octroyer un profil type à un employé         | Non                      | Oui                              | Oui                                | Date configurable                        |
 | Gérer et éditer les profils types             | Non                      | Non                              | Oui                                | Vide                                     |
-| Demander des ajustements de droits            | Oui                      | Oui                              | Oui                                | Date configurable                        |
+| Demander des ajustements de droits            | Oui                      | Oui                              | Non                               | Date configurable                        |
 | Révoquer les droits d’un employé              | Non                      | Oui                              | Oui                                | Date configurable                        |
 | Sauvegarder et définir des profils-types      | Non                      | Non                              | Oui                                | Vide                                     |
 | Consulter la liste des applications           | Oui (uniquement accessibles) | Oui                           | Oui (toutes)                       | Vide                                     |
