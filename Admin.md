@@ -45,3 +45,85 @@ Modification de Admin
 | Sauvegarder et définir des profils-types      | Non                      | Non                              | Oui                                | Vide                                     |
 | Consulter la liste des applications           | Oui (uniquement accessibles) | Oui                           | Oui (toutes)                       | Vide                                     |
 | Notifier les employés sur l’attribution de droits | Non                  | Oui                              | Oui                                | Date configurable                        |
+
+
+# Gérer Profils Type
+
+## Créer Profil Type
+Définir un nouveau profil type pour une application spécifique, en spécifiant les droits d'accès associés.
+
+## Modifier Profil Type
+Changer les droits d'accès d'un profil type existant pour l'adapter aux besoins de l'entreprise.
+
+## Supprimer Profil Type
+Retirer un profil type qui n'est plus nécessaire ou pertinent pour l'application.
+
+## Consulter Profils Types
+Afficher la liste des profils types existants pour chaque application, avec les droits d'accès associés.
+
+# Créer Profil Type
+
+## Formulaire de Création de Profil Type
+
+**Nom du Profil Type:**  
+[Champ de texte] (Ex: "Profil Manager", "Profil Employé")
+
+**Application Associée:**  
+[Liste déroulante] (Sélectionner l'application pour laquelle ce profil est défini)
+
+**Droits d'Accès:**  
+- Accès à l'Application: [Checkbox] (Oui/Non)  
+- Lire les Accès: [Checkbox] (Oui/Non)  
+- Demander Ajustements de Droits: [Checkbox] (Oui/Non)  
+- Gérer Profils Type: [Checkbox] (Oui/Non)  
+- Révoquer Droits: [Checkbox] (Oui/Non)  
+- Notifier Employés: [Checkbox] (Oui/Non)  
+- (Inclure d'autres droits pertinents en fonction des besoins de l'application)
+
+Menu deroulant avec possibilité de cocher 
+
+**Description du Profil:**  
+[Zone de texte] (Expliquer brièvement le rôle et l'utilisation du profil)
+
+**Date de Révocation Automatique :**  
+[Champ de date] (Spécifier une date à laquelle ce profil sera automatiquement révoqué, si applicable)
+
+[Bouton] "Créer Profil Type"
+
+# Modifier Profil Type
+
+## Formulaire de Modification de Profil Type
+
+**Sélectionner le Profil Type à Modifier:**  
+[Liste déroulante] (Sélectionner le profil type à modifier)
+
+**Nom du Profil Type:**  
+[Champ de texte] (Ex: "Profil Manager", "Profil Employé")
+
+**Application Associée:**  
+[Liste déroulante] (Sélectionner l'application pour laquelle ce profil est défini)
+
+**Droits d'Accès:**  
+- Accès à l'Application: [Checkbox] (Oui/Non)  
+- Lire les Accès: [Checkbox] (Oui/Non)  
+- Demander Ajustements de Droits: [Checkbox] (Oui/Non)  
+- Gérer Profils Type: [Checkbox] (Oui/Non)  
+- Révoquer Droits: [Checkbox] (Oui/Non)  
+- Notifier Employés: [Checkbox] (Oui/Non)  
+- (Inclure d'autres droits pertinents en fonction des besoins de l'application)
+
+**Description du Profil:**  
+[Zone de texte] (Expliquer brièvement le rôle et l'utilisation du profil)
+
+**Date de Révocation Automatique (facultatif):**  
+[Champ de date] (Spécifier une date à laquelle ce profil sera automatiquement révoqué, si applicable)
+
+[Bouton] "Modifier Profil Type"
+
+
+
+
+
+
+
+
