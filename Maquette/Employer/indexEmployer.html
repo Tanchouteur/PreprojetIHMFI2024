@@ -57,9 +57,55 @@
 
 <!-- Main content -->
 <div class="w3-main" style="margin-left:250px">
-    <div class="w3-container" style="margin-top:50px">
-        <h1>Contenu principal</h1>
-        <p>Voici le contenu de la page.</p>
+    <div class="w3-display-middle w3-card w3-round-large w3-light-grey" style="width: 60%; height: 500px;">
+
+        <!-- Barre de recherche au-dessus -->
+        <div class="w3-container w3-padding">
+            <input class="w3-input w3-border w3-round" type="text" placeholder="Rechercher une application..." id="searchInput" onkeyup="searchApp()">
+        </div>
+
+        <!-- Bloc déroulant avec scrollbar -->
+        <div class="w3-container w3-padding w3-border w3-round-large w3-light-grey w3-white" style="height: 400px; overflow-y: scroll;">
+            <!-- Contenu des applications avec icônes et titres -->
+            <div id="appList" class="w3-row-padding">
+                <div class="w3-col s12 m4 l4 w3-padding">
+                    <div class="w3-card w3-padding w3-center">
+                        <i class="fa fa-apple w3-xlarge"></i>
+                        <p>Apple App</p>
+                    </div>
+                </div>
+                <div class="w3-col s12 m4 l4 w3-padding">
+                    <div class="w3-card w3-padding w3-center">
+                        <i class="fa fa-android w3-xlarge"></i>
+                        <p>Android App</p>
+                    </div>
+                </div>
+                <div class="w3-col s12 m4 l4 w3-padding">
+                    <div class="w3-card w3-padding w3-center">
+                        <i class="fa fa-windows w3-xlarge"></i>
+                        <p>Windows App</p>
+                    </div>
+                </div>
+                <div class="w3-col s12 m4 l4 w3-padding">
+                    <div class="w3-card w3-padding w3-center">
+                        <i class="fa fa-linux w3-xlarge"></i>
+                        <p>Linux App</p>
+                    </div>
+                </div>
+                <div class="w3-col s12 m4 l4 w3-padding">
+                    <div class="w3-card w3-padding w3-center">
+                        <i class="fa fa-gamepad w3-xlarge"></i>
+                        <p>Gaming App</p>
+                    </div>
+                </div>
+                <div class="w3-col s12 m4 l4 w3-padding">
+                    <div class="w3-card w3-padding w3-center">
+                        <i class="fa fa-code w3-xlarge"></i>
+                        <p>Developer App</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
