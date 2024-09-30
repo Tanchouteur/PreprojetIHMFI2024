@@ -10,11 +10,11 @@
 <body>
 
 <!-- Navbar -->
-<div class="w3-bar w3-light-grey w3-top">
+<div class="w3-bar w3-green w3-top">
     <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-grey" onclick="w3_open()">
         <i class="fa fa-bars"></i>
     </button>
-    <div class="w3-bar-item w3-margin-left"><img src="logo.png" alt="Logo" class="w3-mobile" style="height:40px;"></div>
+    <div style="margin-left: 200px" class="w3-bar-item w3-margin-left"><img src="logo.png" alt="Logo" class="w3-mobile" style="height:40px; margin-left: 200px"></div>
 
     <div class="w3-bar-item ">
         <button class="w3-bar-item w3-button w3-left w3-hover-text-grey" onclick="openPopup()">
@@ -23,41 +23,40 @@
     </div>
 
     <div class="w3-bar-item w3-right">
-
         <button class="w3-button w3-hover-text-grey">
             <img src="pp.png" alt="PP" style="height:40px;">
             <p class="">Profile</p>
         </button>
-
     </div>
 </div>
 
 <!-- Sidebar -->
-<nav class="w3-sidebar w3-bar-block w3-green w3-card w3-animate-left w3-hide-medium w3-hide-small w3-left" id="mySidebar">
+<nav class="w3-sidebar w3-bar-block w3-green w3-animate w3-hide-medium w3-hide-small" id="mySidebar">
     <a href="indexEmployer.html" class="w3-bar-item w3-button w3-margin-top">Accueil</a>
     <a href="NosApplication.html" class="w3-bar-item w3-button w3-margin-top">Nos applications</a>
-    <a href="#" class="w3-bar-item w3-button w3-margin-top">Gestion des employers</a>
-    <a href="#" class="w3-bar-item w3-button w3-margin-top">Demande de droits</a>
-    <a href="#" class="w3-bar-item w3-button w3-margin-top">Paramètres</a>
-    <a href="#" class="w3-bar-item w3-button w3-margin-top">Aide et support</a>
-    <a href="#" class="w3-bar-item w3-button w3-margin-top">Déconexion</a>
-</nav>
-
-<!-- Sidebar mobile-->
-<nav class="w3-sidebar w3-bar-block w3-green w3-card w3-animate-left w3-hide-large " id="mobileSidebar">
-    <button onclick="w3_close()" class="w3-bar-item w3-button w3-large">Close &times;</button>
-    <a href="#" class="w3-bar-item w3-button w3-margin-top">Accueil</a>
-    <a href="#" class="w3-bar-item w3-button w3-margin-top">Nos applications</a>
-    <a href="#" class="w3-bar-item w3-button w3-margin-top">Gestion des employers</a>
+    <a href="#" class="w3-bar-item w3-button w3-margin-top">Gestion des employés</a>
     <a href="#" class="w3-bar-item w3-button w3-margin-top">Demande de droits</a>
     <a href="#" class="w3-bar-item w3-button w3-margin-top">Paramètres</a>
     <a href="#" class="w3-bar-item w3-button w3-margin-top">Aide et support</a>
     <a href="#" class="w3-bar-item w3-button w3-margin-top">Déconnexion</a>
 </nav>
 
+<!-- Sidebar mobile-->
+<nav class="w3-sidebar w3-bar-block w3-green w3-card w3-animate-left w3-hide-large " id="mobileSidebar">
+    <button onclick="w3_close()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+    <a href="indexEmployer.html" class="w3-bar-item w3-button w3-margin-top">Accueil</a>
+    <a href="NosApplication.html" class="w3-bar-item w3-button w3-margin-top">Nos applications</a>
+    <a href="#" class="w3-bar-item w3-button w3-margin-top">Gestion des employés</a>
+    <a href="#" class="w3-bar-item w3-button w3-margin-top">Demande de droits</a>
+    <a href="#" class="w3-bar-item w3-button w3-margin-top">Paramètres</a>
+    <a href="#" class="w3-bar-item w3-button w3-margin-top">Aide et support</a>
+    <a href="#" class="w3-bar-item w3-button w3-margin-top">Déconnexion</a>
+</nav>
+
+
 <!-- Main content -->
 <div class="w3-main" style="margin-left:250px">
-    <div class="w3-display-middle w3-card w3-round-large w3-light-grey" style="width: 60%; height: 500px;">
+    <div class="w3-display-middle w3-card w3-round-large w3-light-grey" style="width: 58%; height: 70vh;">
 
         <!-- Barre de recherche au-dessus -->
         <div class="w3-container w3-padding">
@@ -65,45 +64,58 @@
         </div>
 
         <!-- Bloc déroulant avec scrollbar -->
-        <div class="w3-container w3-padding w3-border w3-round-large w3-light-grey w3-white" style="height: 400px; overflow-y: scroll;">
+        <div class="w3-container w3-padding w3-border w3-round-large w3-light-grey w3-white" style="height: 70vh; overflow-y: scroll;">
             <!-- Contenu des applications avec icônes et titres -->
             <div id="appList" class="w3-row-padding">
                 <div class="w3-col s12 m4 l4 w3-padding">
                     <div class="w3-card w3-padding w3-center">
-                        <i class="fa fa-apple w3-xlarge"></i>
-                        <p>Apple App</p>
+                        <a href="app1Manager.html">
+                            <i class="fa fa-apple w3-xlarge"></i>
+                            <p>App1</p>
+                        </a>
                     </div>
                 </div>
                 <div class="w3-col s12 m4 l4 w3-padding">
                     <div class="w3-card w3-padding w3-center">
-                        <i class="fa fa-android w3-xlarge"></i>
-                        <p>Android App</p>
+                        <a href="app2Manager.html">
+                            <i class="fa fa-android w3-xlarge"></i>
+                            <p>App2</p>
+                        </a>
                     </div>
                 </div>
                 <div class="w3-col s12 m4 l4 w3-padding">
                     <div class="w3-card w3-padding w3-center">
-                        <i class="fa fa-windows w3-xlarge"></i>
-                        <p>Windows App</p>
+                        <a href="app3Manager.html">
+                            <i class="fa fa-windows w3-xlarge"></i>
+                            <p>App3</p>
+                        </a>
                     </div>
                 </div>
                 <div class="w3-col s12 m4 l4 w3-padding">
                     <div class="w3-card w3-padding w3-center">
-                        <i class="fa fa-linux w3-xlarge"></i>
-                        <p>Linux App</p>
+                        <a href="app4Manager.html">
+                            <i class="fa fa-linux w3-xlarge"></i>
+                            <p>App4</p>
+                        </a>
                     </div>
                 </div>
                 <div class="w3-col s12 m4 l4 w3-padding">
                     <div class="w3-card w3-padding w3-center">
-                        <i class="fa fa-gamepad w3-xlarge"></i>
-                        <p>Gaming App</p>
+                        <a href="app5Manager.html">
+                            <i class="fa fa-gamepad w3-xlarge"></i>
+                            <p>App5</p>
+                        </a>
                     </div>
                 </div>
                 <div class="w3-col s12 m4 l4 w3-padding">
                     <div class="w3-card w3-padding w3-center">
-                        <i class="fa fa-code w3-xlarge"></i>
-                        <p>Developer App</p>
+                        <a href="app6Manager.html">
+                            <i class="fa fa-code w3-xlarge"></i>
+                            <p>App6</p>
+                        </a>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -118,18 +130,30 @@
         </header>
         <div class="w3-container">
             <p>Voici vos notifications :</p>
-            <ul>
-                <li>Notification 1</li>
-                <li>Notification 2</li>
-                <li>Notification 3</li>
-            </ul>
+            <div class="w3-panel w3-center w3-border-blue w3-border w3-round-xlarge w3-margin-bottom">
+                <h3 class="w3-color-blue" >Demande d'acces</h3>
+                <div class="">
+                    <p class="w3-left">App 1</p><p class="w3-right">22/09/2024</p>
+                </div>
+            </div>
+            <div class="w3-panel w3-center w3-border-green w3-border w3-round-xlarge w3-margin-bottom">
+                <h3 style="" >Approbation</h3>
+                <div class="">
+                    <p class="w3-left">App 1</p><p class="w3-right">23/09/2024</p>
+                </div>
+            </div>
+            <div class="w3-panel w3-center w3-border-orange w3-border w3-round-xlarge w3-margin-bottom">
+                <h3 style="" >Rapelle de révocation</h3>
+                <div class="">
+                    <p class="w3-left">App 1</p><p class="w3-right">24/09/2024</p>
+                </div>
+            </div>
         </div>
         <footer class="w3-container w3-green">
             <button onclick="closePopup()" class="w3-button w3-lightgreen">Fermer</button>
         </footer>
     </div>
 </div>
-
 
 <script>
     function w3_open() {
