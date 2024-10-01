@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <title>Maquette Web - Demande de droits</title>
+  <title>Maquette Web</title>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <meta charset="UTF-8">
 
 </head>
-<body>
+<body style="min-height: 100vh;">
 
 <!-- Navbar -->
-<div class="w3-bar w3-green w3-top">
-  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-grey" onclick="w3_open()">
-    <i class="fa fa-bars"></i>
-  </button>
-  <div style="margin-left: 200px" class="w3-bar-item w3-margin-left"><img src="logo.png" alt="Logo" class="w3-mobile" style="height:40px; margin-left: 200px"></div>
+<div class="w3-bar w3-green w3-top w3-container w3-cell w3-cell-middle">
 
-  <div class="w3-bar-item ">
-    <button class="w3-bar-item w3-button w3-left w3-hover-text-grey" onclick="openPopup()">
+  <div class="w3-bar-item w3-container">
+    <button class="w3-bar-item w3-button w3-hover-none w3-hover-text-grey" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </button>
+  </div>
+
+  <div class="w3-bar-item w3-container">
+    <img src="logo.png" alt="Logo">
+  </div>
+
+  <div class="w3-bar-item">
+    <button class="w3-bar-item w3-button w3-hover-text-grey" onclick="openPopup()">
       <i class="fa fa-bell"></i>
     </button>
   </div>
 
-  <div class="w3-center w3-bar-item w3-hide-small">
-    <h2>Demande de Droits</h2>
+  <div class="w3-bar-item w3-hide-small w3-hide-medium">
+    <h2>Demande de Drois</h2>
   </div>
 
-  <div class="w3-bar-item w3-right">
+  <div class="w3-bar-item">
     <button class="w3-button w3-hover-text-grey" onclick="window.location.href='../Manager/indexManager.html';">
       <img src="pp.png" alt="PP" style="height:40px;">
       <p class="">Employer</p>
@@ -34,89 +40,62 @@
   </div>
 </div>
 
-<!-- Sidebar -->
+<!-- Sidebar
 <nav class="w3-sidebar w3-bar-block w3-green w3-animate w3-hide-medium w3-hide-small" id="mySidebar">
   <a href="indexEmployer.html" class="w3-bar-item w3-button w3-margin-top">Accueil</a>
   <a href="NosApplicationEmployer.html" class="w3-bar-item w3-button w3-margin-top">Nos applications</a>
   <a href="demandeDeDroitsEmployer.html" class="w3-bar-item w3-button w3-margin-top">Demande de droits</a>
-  <a href="#" class="w3-bar-item w3-button w3-margin-top">Paramètres</a>
-  <a href="#" class="w3-bar-item w3-button w3-margin-top">Aide et support</a>
-  <a href="#" class="w3-bar-item w3-button w3-margin-top">Déconnexion</a>
-</nav>
+  <a href="parametresEmployer.html" class="w3-bar-item w3-button w3-margin-top">Paramètres</a>
+  <a href="helpEmployer.html" class="w3-bar-item w3-button w3-margin-top">Aide et support</a>
+  <a href="deconexion.html" class="w3-bar-item w3-button w3-margin-top">Déconnexion</a>
+</nav>-->
 
 <!-- Sidebar mobile-->
-<nav class="w3-sidebar w3-bar-block w3-green w3-card w3-animate-left w3-hide-large " id="mobileSidebar">
+<nav class="w3-sidebar w3-bar-block w3-green w3-card w3-animate-left " id="mobileSidebar">
   <button onclick="w3_close()" class="w3-bar-item w3-button w3-large">Close &times;</button>
   <a href="indexEmployer.html" class="w3-bar-item w3-button w3-margin-top">Accueil</a>
   <a href="NosApplicationEmployer.html" class="w3-bar-item w3-button w3-margin-top">Nos applications</a>
   <a href="demandeDeDroitsEmployer.html" class="w3-bar-item w3-button w3-margin-top">Demande de droits</a>
-  <a href="#" class="w3-bar-item w3-button w3-margin-top">Paramètres</a>
-  <a href="#" class="w3-bar-item w3-button w3-margin-top">Aide et support</a>
-  <a href="#" class="w3-bar-item w3-button w3-margin-top">Déconnexion</a>
+  <a href="parametresEmployer.html" class="w3-bar-item w3-button w3-margin-top">Paramètres</a>
+  <a href="helpEmployer.html" class="w3-bar-item w3-button w3-margin-top">Aide et support</a>
+  <a href="deconexion.html" class="w3-bar-item w3-button w3-margin-top">Déconnexion</a>
 </nav>
 
 
 <!-- Main content -->
-<div class="w3-main" style="margin-left:250px">
-  <div class="w3-display-middle w3-card w3-round-large w3-light-grey" style="width: 58%; height: 70vh;">
-    <!-- Barre de recherche au-dessus -->
-    <div class="w3-container w3-padding">
-      <input class="w3-input w3-border w3-round" type="text" placeholder="Rechercher parmis les apps..." id="searchInput" onkeyup="searchApp()">
+<div class="w3-main" style="height:100vh;">
+
+  <div class="w3-display-middle w3-card w3-round-large" style="margin-top:0px">
+
+    <div class="w3-container w3-green w3-round-large">
+      <h2>Veuillez Completez les formulaire ci dessous</h2>
     </div>
-    <!-- Bloc déroulant avec scrollbar -->
-    <div class="w3-container w3-padding w3-border w3-round-large w3-light-grey w3-white" style="height: 70vh; overflow-y: scroll;">
-      <!-- Contenu des applications avec icônes et titres -->
-      <div id="appList" class="w3-row-padding">
-        <div class="w3-col s12 m4 l4 w3-padding w3-hover-border-green">
-          <div class="w3-card w3-padding w3-center">
-            <a href="app1DroitsEmployer.html">
-              <i class="fa fa-apple w3-xlarge"></i>
-              <p>App1</p>
-            </a>
-          </div>
+
+    <form class="w3-container">
+      <div class="w3-row-padding">
+        <div class="w3-container w3-padding-16 w3-padding-large w3-half">
+          <label>Application
+            <input class="w3-input w3-animate-input" type="text" placeholder="app 1..." style="width:70%">
+          </label>
+          <label class="w3-margin-top">Descriptions des droits demander
+            <input class="w3-input w3-animate-input" type="text" placeholder="Expliquez pourquoi vous avez besoins de x droits" style="width:70%">
+          </label>
         </div>
-        <div class="w3-col s12 m4 l4 w3-padding">
-          <div class="w3-card w3-padding w3-center">
-            <a href="app1DroitsEmployer.html">
-              <i class="fa fa-android w3-xlarge"></i>
-              <p>App2</p>
-            </a>
-          </div>
-        </div>
-        <div class="w3-col s12 m4 l4 w3-padding">
-          <div class="w3-card w3-padding w3-center">
-            <a href="app1DroitsEmployer.html">
-              <i class="fa fa-windows w3-xlarge"></i>
-              <p>App3</p>
-            </a>
-          </div>
-        </div>
-        <div class="w3-col s12 m4 l4 w3-padding">
-          <div class="w3-card w3-padding w3-center">
-            <a href="app1DroitsEmployer.html">
-              <i class="fa fa-linux w3-xlarge"></i>
-              <p>App4</p>
-            </a>
-          </div>
-        </div>
-        <div class="w3-col s12 m4 l4 w3-padding">
-          <div class="w3-card w3-padding w3-center">
-            <a href="app1DroitsEmployer.html">
-              <i class="fa fa-gamepad w3-xlarge"></i>
-              <p>App5</p>
-            </a>
-          </div>
-        </div>
-        <div class="w3-col s12 m4 l4 w3-padding">
-          <div class="w3-card w3-padding w3-center">
-            <a href="app1DroitsEmployer.html">
-              <i class="fa fa-code w3-xlarge"></i>
-              <p>App6</p>
-            </a>
-          </div>
+        <div class="w3-container w3-padding-16 w3-padding-large w3-half">
+          <label>Type de drois souhaiter</label>
+          <select class="w3-select" name="option">
+            <option value="" disabled selected>Selectionnez type de droits</option>
+            <option value="1">Acces complet</option>
+            <option value="2">Acces modification</option>
+            <option value="3">Acces lecture</option>
+          </select>
         </div>
       </div>
-    </div>
+      <div class="w3-row-padding w3-margin-bottom">
+        <button class="w3-btn w3-green">Soumettre la demande</button>
+      </div>
+    </form>
+
   </div>
 </div>
 

@@ -1,63 +1,69 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <title>Maquette Web - Nos App</title>
+    <title>Maquette Web</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <meta charset="UTF-8">
 
 </head>
-<body>
+<body style="min-height: 100vh;">
 
 <!-- Navbar -->
-<div class="w3-bar w3-green w3-top">
-    <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-grey" onclick="w3_open()">
-        <i class="fa fa-bars"></i>
-    </button>
-    <div style="margin-left: 200px" class="w3-bar-item w3-margin-left"><img src="logo.png" alt="Logo" class="w3-mobile" style="height:40px; margin-left: 200px"></div>
+<div class="w3-bar w3-green w3-top w3-container w3-cell w3-cell-middle">
 
-    <div class="w3-bar-item ">
-        <button class="w3-bar-item w3-button w3-left w3-hover-text-grey" onclick="openPopup()">
+    <div class="w3-bar-item w3-container w3-rest">
+        <button class="w3-bar-item w3-button w3-hover-none w3-hover-text-grey" onclick="w3_open()">
+            <i class="fa fa-bars"></i>
+        </button>
+    </div>
+
+    <div class="w3-bar-item w3-container w3-rest">
+        <img src="logo.png" alt="Logo">
+    </div>
+
+    <div class="w3-bar-item w3-rest">
+        <button class="w3-bar-item w3-button w3-hover-text-grey" onclick="openPopup()">
             <i class="fa fa-bell"></i>
         </button>
     </div>
 
-    <div class="w3-center w3-bar-item w3-hide-small">
-        <h2>Nos Applications</h2>
+    <div class="w3-bar-item w3-hide-small w3-hide-medium w3-rest">
+        <h2>Accueil</h2>
     </div>
 
-    <div class="w3-bar-item w3-right">
-        <button class="w3-button w3-hover-text-grey">
+    <div class="w3-bar-item w3-rest">
+        <button class="w3-button w3-hover-text-grey" onclick="window.location.href='../Manager/indexManager.html';">
             <img src="pp.png" alt="PP" style="height:40px;">
             <p class="">Employer</p>
         </button>
     </div>
 </div>
 
-<!-- Sidebar -->
+<!-- Sidebar
 <nav class="w3-sidebar w3-bar-block w3-green w3-animate w3-hide-medium w3-hide-small" id="mySidebar">
-    <a href="indexEmployer.html" class="w3-bar-item w3-button w3-margin-top">Accueil</a>
-    <a href="NosApplicationEmployer.html" class="w3-bar-item w3-button w3-margin-top">Nos applications</a>
-    <a href="demandeDeDroitsEmployer.html" class="w3-bar-item w3-button w3-margin-top">Demande de droits</a>
-    <a href="#" class="w3-bar-item w3-button w3-margin-top">Paramètres</a>
-    <a href="#" class="w3-bar-item w3-button w3-margin-top">Aide et support</a>
-    <a href="#" class="w3-bar-item w3-button w3-margin-top">Déconnexion</a>
-</nav>
+  <a href="indexEmployer.html" class="w3-bar-item w3-button w3-margin-top">Accueil</a>
+  <a href="NosApplicationEmployer.html" class="w3-bar-item w3-button w3-margin-top">Nos applications</a>
+  <a href="demandeDeDroitsEmployer.html" class="w3-bar-item w3-button w3-margin-top">Demande de droits</a>
+  <a href="parametresEmployer.html" class="w3-bar-item w3-button w3-margin-top">Paramètres</a>
+  <a href="helpEmployer.html" class="w3-bar-item w3-button w3-margin-top">Aide et support</a>
+  <a href="deconexion.html" class="w3-bar-item w3-button w3-margin-top">Déconnexion</a>
+</nav>-->
 
 <!-- Sidebar mobile-->
-<nav class="w3-sidebar w3-bar-block w3-green w3-card w3-animate-left w3-hide-large " id="mobileSidebar">
+<nav class="w3-sidebar w3-bar-block w3-green w3-card w3-animate-left " id="mobileSidebar">
     <button onclick="w3_close()" class="w3-bar-item w3-button w3-large">Close &times;</button>
     <a href="indexEmployer.html" class="w3-bar-item w3-button w3-margin-top">Accueil</a>
     <a href="NosApplicationEmployer.html" class="w3-bar-item w3-button w3-margin-top">Nos applications</a>
     <a href="demandeDeDroitsEmployer.html" class="w3-bar-item w3-button w3-margin-top">Demande de droits</a>
-    <a href="#" class="w3-bar-item w3-button w3-margin-top">Paramètres</a>
-    <a href="#" class="w3-bar-item w3-button w3-margin-top">Aide et support</a>
-    <a href="#" class="w3-bar-item w3-button w3-margin-top">Déconnexion</a>
+    <a href="parametresEmployer.html" class="w3-bar-item w3-button w3-margin-top">Paramètres</a>
+    <a href="helpEmployer.html" class="w3-bar-item w3-button w3-margin-top">Aide et support</a>
+    <a href="deconexion.html" class="w3-bar-item w3-button w3-margin-top">Déconnexion</a>
 </nav>
 
 <!-- Main content -->
-<div class="w3-main" style="margin-left:250px">
-    <div class="w3-display-middle w3-card w3-round-large w3-light-grey" style="width: 60%; height: 71vh;">
+<div class="w3-main">
+    <div class="w3-display-middle w3-card w3-round-large w3-light-grey" style="width: 60%;">
 
         <!-- Barre de recherche au-dessus -->
         <div class="w3-container w3-padding">
