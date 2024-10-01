@@ -12,36 +12,30 @@
 <!-- Navbar -->
 <div class="w3-bar w3-green w3-top w3-container w3-cell w3-cell-middle">
 
-    <div class="w3-bar-item w3-container w3-rest">
+    <div class="w3-bar-item w3-container">
         <button class="w3-bar-item w3-button w3-hover-none w3-hover-text-grey" onclick="w3_open()">
             <i class="fa fa-bars"></i>
         </button>
     </div>
 
-    <div class="w3-bar-item w3-container w3-rest">
+    <div class="w3-bar-item w3-container">
         <img src="logo.png" alt="Logo">
     </div>
 
-    <div class="w3-bar-item w3-rest">
+    <div class="w3-bar-item">
         <button class="w3-bar-item w3-button w3-hover-text-grey" onclick="openPopup()">
             <i class="fa fa-bell"></i>
         </button>
     </div>
 
-    <div class="w3-bar-item w3-hide-small w3-hide-medium w3-rest">
-        <h2>Accueil</h2>
+    <div class="w3-bar-item w3-hide-small w3-hide-medium">
+        <h2>Demande de Drois</h2>
     </div>
 
-    <div class="w3-bar-item w3-rest">
+    <div class="w3-bar-item">
         <button class="w3-button w3-hover-text-grey" onclick="window.location.href='../Manager/indexManager.html';">
             <img src="../res/pp.png" class="w3-circle" alt="PP" style="height:40px;">
             <p class="">Employer</p>
-        </button>
-    </div>
-
-    <div class="w3-bar-item w3-rest">
-        <button class="w3-button w3-hover-text-grey" onclick="window.location.href='acountEmployer.html';">
-            <p class="">sandrine</p>
         </button>
     </div>
 </div>
@@ -69,67 +63,15 @@
 
 
 <!-- Main content -->
-<div class="w3-main" style="">
-    <div class="w3-display-middle w3-card w3-round-large w3-light-grey" style="width: 58%; margin-top: 50px;">
+<div class="w3-main" style="height:100vh;">
 
-        <!-- Barre de recherche au-dessus -->
-        <div class="w3-container w3-padding">
-            <input class="w3-input w3-border w3-round" type="text" placeholder="Rechercher parmis les favoris..." id="searchInput" onkeyup="searchApp()">
+    <div class="w3-display-middle w3-card w3-round-large" style="margin-top:0px">
+
+        <div class="w3-container w3-green w3-round-large">
+            <h2>Parametres</h2>
         </div>
-               <!-- Bloc déroulant avec scrollbar -->
-        <div class="w3-container w3-padding w3-border w3-round-large w3-light-grey w3-white" style="height: 70vh; overflow-y: scroll;">
-            <!-- Contenu des applications avec icônes et titres -->
-            <div id="appList" class="w3-row-padding">
-                <div class="w3-col s12 m4 l4 w3-padding">
-                    <div class="w3-card w3-padding w3-center">
-                        <a href="../app1.html">
-                            <i class="fa fa-apple w3-xlarge"></i>
-                            <p>App1</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="w3-col s12 m4 l4 w3-padding">
-                    <div class="w3-card w3-padding w3-center">
-                        <a href="../app1.html">
-                            <i class="fa fa-android w3-xlarge"></i>
-                            <p>App2</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="w3-col s12 m4 l4 w3-padding">
-                    <div class="w3-card w3-padding w3-center">
-                        <a href="../app1.html">
-                            <i class="fa fa-windows w3-xlarge"></i>
-                            <p>App3</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="w3-col s12 m4 l4 w3-padding">
-                    <div class="w3-card w3-padding w3-center">
-                        <a href="../app1.html">
-                            <i class="fa fa-linux w3-xlarge"></i>
-                            <p>App4</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="w3-col s12 m4 l4 w3-padding">
-                    <div class="w3-card w3-padding w3-center">
-                        <a href="../app1.html">
-                            <i class="fa fa-gamepad w3-xlarge"></i>
-                            <p>App5</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="w3-col s12 m4 l4 w3-padding">
-                    <div class="w3-card w3-padding w3-center">
-                        <a href="../app1.html">
-                            <i class="fa fa-code w3-xlarge"></i>
-                            <p>App6</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+
     </div>
 </div>
 
