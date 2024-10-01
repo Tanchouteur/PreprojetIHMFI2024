@@ -46,16 +46,6 @@
   </div>
 </div>
 
-<!-- Sidebar
-<nav class="w3-sidebar w3-bar-block w3-green w3-animate w3-hide-medium w3-hide-small" id="mySidebar">
-  <a href="indexEmployer.html" class="w3-bar-item w3-button w3-margin-top">Accueil</a>
-  <a href="NosApplicationEmployer.html" class="w3-bar-item w3-button w3-margin-top">Nos applications</a>
-  <a href="demandeDeDroitsEmployer.html" class="w3-bar-item w3-button w3-margin-top">Demande de droits</a>
-  <a href="parametresEmployer.html" class="w3-bar-item w3-button w3-margin-top">Paramètres</a>
-  <a href="helpEmployer.html" class="w3-bar-item w3-button w3-margin-top">Aide et support</a>
-  <a href="deconexion.html" class="w3-bar-item w3-button w3-margin-top">Déconnexion</a>
-</nav>-->
-
 <!-- Sidebar mobile-->
 <nav class="w3-sidebar w3-bar-block w3-green w3-card w3-animate-left " id="mobileSidebar">
   <button onclick="w3_close()" class="w3-bar-item w3-button w3-large">Close &times;</button>
@@ -80,25 +70,27 @@
     <form class="w3-container">
       <div class="w3-row-padding">
         <div class="w3-container w3-padding-16 w3-padding-large w3-half">
+
           <label>Application
-            <input class="w3-input w3-animate-input" type="text" placeholder="app 1..." style="width:70%">
+            <input class="w3-input w3-animate-input w3-margin-bottom" type="text" placeholder="app 1..." style="width:70%">
           </label>
           <label class="w3-margin-top">Descriptions des droits demander
-            <input class="w3-input w3-animate-input" type="text" placeholder="Expliquez pourquoi vous avez besoins de x droits" style="width:70%">
+            <input class="w3-input w3-animate-input w3-margin-bottom" type="text" placeholder="Expliquez pourquoi vous avez besoins de x droits" style="width:70%">
           </label>
+
         </div>
+
         <div class="w3-container w3-padding-16 w3-padding-large w3-half">
           <label>Type de drois souhaiter</label>
-          <select class="w3-select" name="option">
+          <select class="w3-select w3-margin-bottom" name="option">
             <option value="" disabled selected>Selectionnez type de droits</option>
             <option value="1">Acces complet</option>
             <option value="2">Acces modification</option>
             <option value="3">Acces lecture</option>
           </select>
+
+          <button class="w3-btn w3-green w3-round">Envoyer</button>
         </div>
-      </div>
-      <div class="w3-row-padding w3-margin-bottom">
-        <button class="w3-btn w3-green">Soumettre la demande</button>
       </div>
     </form>
 
