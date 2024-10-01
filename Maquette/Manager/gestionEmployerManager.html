@@ -29,7 +29,7 @@
     </div>
 
     <div class="w3-bar-item w3-hide-small w3-hide-medium w3-rest">
-        <h2>Accueil</h2>
+        <h2>Gestion des employers</h2>
     </div>
 
     <div class="w3-bar-item w3-rest">
@@ -61,66 +61,83 @@
 
 <!-- Main content -->
 <div class="w3-main" style="">
-    <div class="w3-display-middle w3-card w3-round-large w3-light-grey" style="width: 58%; margin-top: 50px;">
+    <div class="w3-card-4 w3-round-large w3-light-grey w3-display-middle w3-padding-large" style="width: 80%; margin-top: 0px;">
+        <h2 class="w3-center">Demande de droits</h2>
 
         <!-- Barre de recherche au-dessus -->
         <div class="w3-container w3-padding">
-            <input class="w3-input w3-border w3-round" type="text" placeholder="Rechercher parmis les favoris..." id="searchInput" onkeyup="searchApp()">
+            <input class="w3-input w3-border w3-round" type="text" placeholder="Rechercher par nom ou email..." id="searchInput" onkeyup="searchApp()">
         </div>
-        <!-- Bloc déroulant avec scrollbar -->
-        <div class="w3-container w3-padding w3-border w3-round-large w3-light-grey w3-white" style="height: 70vh; overflow-y: scroll;">
-            <!-- Contenu des applications avec icônes et titres -->
-            <div id="appList" class="w3-row-padding">
-                <div class="w3-col s12 m4 l4 w3-padding">
-                    <div class="w3-card w3-padding w3-center">
-                        <a href="../app1.html">
-                            <i class="fa fa-apple w3-xlarge"></i>
-                            <p>App1</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="w3-col s12 m4 l4 w3-padding">
-                    <div class="w3-card w3-padding w3-center">
-                        <a href="../app1.html">
-                            <i class="fa fa-android w3-xlarge"></i>
-                            <p>App2</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="w3-col s12 m4 l4 w3-padding">
-                    <div class="w3-card w3-padding w3-center">
-                        <a href="../app1.html">
-                            <i class="fa fa-windows w3-xlarge"></i>
-                            <p>App3</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="w3-col s12 m4 l4 w3-padding">
-                    <div class="w3-card w3-padding w3-center">
-                        <a href="../app1.html">
-                            <i class="fa fa-linux w3-xlarge"></i>
-                            <p>App4</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="w3-col s12 m4 l4 w3-padding">
-                    <div class="w3-card w3-padding w3-center">
-                        <a href="../app1.html">
-                            <i class="fa fa-gamepad w3-xlarge"></i>
-                            <p>App5</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="w3-col s12 m4 l4 w3-padding">
-                    <div class="w3-card w3-padding w3-center">
-                        <a href="../app1.html">
-                            <i class="fa fa-code w3-xlarge"></i>
-                            <p>App6</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
+
+        <div class=" w3-round-large w3-container w3-responsive">
+            <table class="w3-table-all w3-round-large">
+                <tr>
+                    <th>Nom</th>
+                    <th>Poste</th>
+                    <th>Application</th>
+                    <th>droits</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>Patrik</td>
+                    <td>Comptable</td>
+                    <td>5</td>
+                    <td>Acces modification</td>
+                    <td><button class="w3-button w3-green w3-round" onclick="openModif()">Modifier</button></td>
+                </tr>
+                <tr>
+                    <td>Lina</td>
+                    <td>Developpeuse</td>
+                    <td>10</td>
+                    <td>Acces complet</td>
+                    <td><button class="w3-button w3-green w3-round">Modifier</button></td>
+                </tr>
+            </table>
         </div>
+    </div>
+</div>
+
+<div id="modificationPopup" class="w3-modal w3-round-large" style="display:none;">
+    <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-round-large">
+        <header class="w3-container w3-green w3-round-large">
+            <span onclick="closeModif()" class="w3-button w3-display-topright w3-round-large">&times;</span>
+            <h2>Détails de l'employer</h2>
+        </header>
+        <div class="w3-container">
+            <form class="w3-container">
+                <div class="w3-row-padding">
+                    <div class="w3-container w3-padding-16 w3-padding-large w3-half">
+                        <label class="">Nom
+                            <input disabled class="w3-input w3-animate-input w3-margin-bottom" type="text" placeholder="Patrik" style="width:100%">
+                        </label>
+                        <label class="">Poste
+                            <input disabled class="w3-input w3-animate-input w3-margin-bottom" type="text" placeholder="Comptable" style="width:100%">
+                        </label>
+                        <label class="">Email
+                            <input disabled class="w3-input w3-animate-input w3-margin-bottom" type="email" placeholder="patrik@gmail.com" style="width:100%">
+                        </label>
+                    </div>
+                    <div class="w3-container w3-padding-16 w3-padding-large w3-half">
+                        <label>Accorder un droit</label>
+                        <select class="w3-select w3-margin-bottom" name="option">
+                            <option value="" disabled selected>Selectionnez type de droit</option>
+                            <option value="1">Acces complet</option>
+                            <option value="2">Ecriture</option>
+                            <option value="3">Lecture</option>
+                        </select>
+
+                        <label class="w3-margin-top">Date de révocation</label>
+                        <input type="date" class="w3-margin-bottom">
+
+                        <button class="w3-btn w3-green w3-round w3-left">Mettre à jour</button>
+                        <button class="w3-btn w3-red w3-round w3-right">Anuler</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <footer class="w3-container w3-green w3-round-large">
+            <button onclick="closeModif()" class="w3-button w3-lightgreen w3-round-large">Fermer</button>
+        </footer>
     </div>
 </div>
 
@@ -173,6 +190,14 @@
 
     function closePopup() {
         document.getElementById("notificationPopup").style.display = "none";
+    }
+
+    function openModif() {
+        document.getElementById("modificationPopup").style.display = "block";
+    }
+
+    function closeModif() {
+        document.getElementById("modificationPopup").style.display = "none";
     }
 </script>
 
