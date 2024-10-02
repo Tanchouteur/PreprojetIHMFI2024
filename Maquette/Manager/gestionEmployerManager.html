@@ -47,12 +47,15 @@
             <p class="">Lina</p>
         </button>
     </div>
-    <div class="w3-card-4 w3-round-large w3-light-grey w3-display-middle w3-padding-large" style="max-width: 75%;min-width: 50%; margin-top: 0px;">
+    <div class="w3-card-4 w3-round-large w3-light-grey w3-display-middle w3-padding-large" style="max-width: 75%;min-width: 50%;">
         <h2 class="w3-center">Employer</h2>
 
         <!-- Barre de recherche au-dessus -->
         <div class="w3-container w3-padding">
-            <input class="w3-input w3-border w3-round" type="text" placeholder="Rechercher par nom ou email..." id="searchInput" onkeyup="searchApp()">
+            <label for="searchInput"></label><input class="w3-input w3-border w3-round" type="text" placeholder="Rechercher par nom ou email..." id="searchInput" onkeyup="function searchApp() {
+
+            }
+            searchApp()">
         </div>
 
         <div class=" w3-round-large w3-container w3-responsive">
@@ -104,16 +107,16 @@
                         </label>
                     </div>
                     <div class="w3-container w3-padding-16 w3-padding-large w3-half">
-                        <label>Accorder un droit</label>
-                        <select class="w3-select w3-margin-bottom" name="option">
+                        <label for="select">Accorder un droit</label>
+                        <select class="w3-select w3-margin-bottom" name="option" id="select">
                             <option value="" disabled selected>Selectionnez type de droit</option>
                             <option value="1">Acces complet</option>
                             <option value="2">Ecriture</option>
                             <option value="3">Lecture</option>
                         </select>
 
-                        <label class="w3-margin-top">Date de révocation</label>
-                        <input type="date" class="w3-margin-bottom">
+                        <label class="w3-margin-top">Date de révocation
+                        <input type="date" class="w3-margin-bottom"></label>
 
                         <button class="w3-btn w3-green w3-round w3-left">Mettre à jour</button>
                         <button class="w3-btn w3-red w3-round w3-right">Anuler</button>
