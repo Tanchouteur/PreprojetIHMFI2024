@@ -24,10 +24,10 @@
 
 
 <!-- Main content -->
-<div class="w3-main" style="display: flex; width: 100%; justify-content: center">
+<div class="content-container" style="display: flex; width: 100%; justify-content: center">
 
   <!-- Header -->
-  <div class="header-section w3-center w3-card w3-round-large" style="width: 60%; display: flex; justify-content: space-between; align-items: center; padding: 10px; ">
+  <div class="header-section w3-center w3-card w3-round-large" style="min-width: 60%; width: fit-content; display: flex; justify-content: space-between; align-items: center; padding: 10px; ">
     <div style="display: flex; align-items: center;">
       <button class="w3-bar-item w3-button w3-hover-scale w3-text-dark-grey w3-round-large w3-margin-right" onclick="w3_open()">
         <i class="fa fa-bars"></i>
@@ -35,7 +35,7 @@
       <h3 class="w3-bold">
         Demande de droit
       </h3>
-      <span class="w3-badge w3-button w3-dark-grey w3-padding" style="border-radius: 20px; margin-left: 10px;" onclick="window.location.href='../Manager/indexManager.html';">Employé</span>
+      <span class="w3-badge w3-button w3-dark-grey w3-padding w3-hide-small" style="border-radius: 20px; margin-left: 10px;" onclick="window.location.href='../Manager/indexManager.html';">Employé</span>
       <button class="w3-bar-item w3-button w3-hover-text-grey w3-margin-left w3-round-large" onclick="openPopup()">
         <i class="fa fa-bell"></i>
       </button>
@@ -46,7 +46,7 @@
     </button>
   </div>
 
-  <div class="w3-display-middle w3-card w3-round-large" style="margin-top:0px">
+  <div class="w3-display-middle w3-card w3-round-large" style="">
 
     <div class="w3-container w3-dark-grey w3-round-large">
       <h2>Veuillez Completez les formulaire ci dessous</h2>
