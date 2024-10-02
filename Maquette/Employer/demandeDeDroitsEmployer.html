@@ -9,62 +9,46 @@
 </head>
 <body style="min-height: 100vh;">
 
-<!-- Navbar -->
-<div class="w3-bar w3-dark-grey w3-top w3-container w3-cell w3-cell-middle" style="display: flex; align-items: center; justify-content: space-between;">
-  <div class="" style="display: flex; align-items: center; justify-content: space-between;">
-    <div class="w3-bar-item w3-container">
-      <button class="w3-bar-item w3-button w3-hover-none w3-hover-text-grey" onclick="w3_open()">
-        <i class="fa fa-bars"></i>
-      </button>
-    </div>
-
-    <div class="w3-bar-item w3-container">
-      <img src="logo.png" alt="Logo">
-    </div>
-
-    <div class="w3-bar-item ">
-      <button class="w3-bar-item w3-button w3-hover-text-grey" onclick="openPopup()">
-        <i class="fa fa-bell"></i>
-      </button>
-    </div>
-  </div>
-
-  <div class="w3-bar-item w3-hide-small w3-hide-medium w3-center">
-    <h2>Accueil</h2>
-  </div>
-
-
-
-  <div class="w3-bar-item w3-right">
-    <button class="w3-button w3-hover-text-grey" onclick="window.location.href='../Manager/indexManager.html';">
-      <p class="">Employer</p>
-    </button>
-    <button class="w3-button w3-hover-text-grey" onclick="window.location.href='acountEmployer.html';">
-      <img src="../res/pp.png" class="w3-circle" alt="PP" style="height:40px;">
-      <p class="">sandrine</p>
-    </button>
-  </div>
-</div>
-
 <!-- Sidebar mobile-->
 <nav class="w3-sidebar w3-bar-block w3-dark-grey w3-card w3-animate-left " id="mobileSidebar">
-  <button onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-margin-top">Close &times;</button>
-  <h1 class="w3-bar-item w3-text-theme w3-margin-top">Menu</h1>
-  <a href="indexEmployer.html" class="w3-bar-item w3-button w3-margin-top">Accueil</a>
-  <a href="NosApplicationEmployer.html" class="w3-bar-item w3-button w3-margin-top">Nos applications</a>
-  <a href="demandeDeDroitsEmployer.html" class="w3-bar-item w3-button w3-margin-top">Demande de droits</a>
-  <a href="acountEmployer.html" class="w3-bar-item w3-button w3-margin-top">Paramètres</a>
-  <a href="helpEmployer.html" class="w3-bar-item w3-button w3-margin-top">Aide et support</a>
-  <a href="deconexion.html" class="w3-bar-item w3-button w3-margin-top">Déconnexion</a>
+  <button onclick="w3_close()" class="w3-bar-item w3-button w3-round-large w3-margin-top">Close &times;</button>
+  <h3 class="w3-bar-item w3-text-theme w3-margin-top">Menu</h3>
+  <a style="width: fit-content; min-width: 60%" href="indexEmployer.html" class="w3-round-large w3-bar-item w3-button w3-margin-top w3-margin-left">Accueil</a>
+  <a style="width: fit-content; min-width: 60%" href="NosApplicationEmployer.html" class="w3-round-large w3-bar-item w3-button w3-margin-top w3-margin-left">Nos applications</a>
+  <a style="width: fit-content; min-width: 60%" href="demandeDeDroitsEmployer.html" class="w3-round-large w3-bar-item w3-button w3-margin-top w3-margin-left">Demande de droits</a>
+  <a style="width: fit-content; min-width: 60%" href="acountEmployer.html" class="w3-round-large w3-bar-item w3-button w3-margin-top w3-margin-left">Parametres</a>
+  <a style="width: fit-content; min-width: 60%" href="helpEmployer.html" class="w3-round-large w3-bar-item w3-button w3-margin-top w3-margin-left">Help & Support</a>
+
+  <a class="w3-bar-item w3-button w3-red w3-margin-top w3-round-large w3-center w3-margin-left" style="width: fit-content">Déconnexion</a>
 </nav>
 
 
 <!-- Main content -->
-<div class="w3-main" style="height:100vh;">
+<div class="w3-main" style="display: flex; width: 100%; justify-content: center">
+
+  <!-- Header -->
+  <div class="header-section w3-center w3-card w3-round-large" style="width: 60%; display: flex; justify-content: space-between; align-items: center; padding: 10px; ">
+    <div style="display: flex; align-items: center;">
+      <button class="w3-bar-item w3-button w3-hover-scale w3-text-dark-grey w3-round-large w3-margin-right" onclick="w3_open()">
+        <i class="fa fa-bars"></i>
+      </button>
+      <h3 class="w3-bold" style="color: green; margin: 0;">
+        Demande de droit
+      </h3>
+      <span class="w3-badge w3-button w3-green w3-padding" style="border-radius: 20px; margin-left: 10px;" onclick="window.location.href='../Manager/indexManager.html';">Employé</span>
+      <button class="w3-bar-item w3-button w3-hover-text-grey w3-margin-left w3-round-large" onclick="openPopup()">
+        <i class="fa fa-bell"></i>
+      </button>
+    </div>
+    <button class="w3-button w3-hover-text-grey w3-padding-top w3-round-large" onclick="window.location.href='acountEmployer.html';">
+      <img src="../res/pp.png" class="w3-circle" alt="PP" style="height:40px;">
+      <p class="">sandrine</p>
+    </button>
+  </div>
 
   <div class="w3-display-middle w3-card w3-round-large" style="margin-top:0px">
 
-    <div class="w3-container w3-green w3-round-large">
+    <div class="w3-container w3-dark-grey w3-round-large">
       <h2>Veuillez Completez les formulaire ci dessous</h2>
     </div>
 

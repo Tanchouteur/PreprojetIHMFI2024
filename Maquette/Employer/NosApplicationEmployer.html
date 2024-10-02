@@ -9,65 +9,46 @@
 </head>
 <body style="min-height: 100vh;">
 
-<!-- Navbar -->
-<div class="w3-bar w3-dark-grey w3-top w3-container w3-cell w3-cell-middle" style="display: flex; align-items: center; justify-content: space-between;">
-    <div class="" style="display: flex; align-items: center; justify-content: space-between;">
-        <div class="w3-bar-item w3-container">
-            <button class="w3-bar-item w3-button w3-hover-none w3-hover-text-grey" onclick="w3_open()">
+<!-- Sidebar mobile-->
+<nav class="w3-sidebar w3-bar-block w3-dark-grey w3-card w3-animate-left " id="mobileSidebar">
+    <button onclick="w3_close()" class="w3-bar-item w3-button w3-round-large w3-margin-top">Close &times;</button>
+    <h3 class="w3-bar-item w3-text-theme w3-margin-top">Menu</h3>
+    <a style="width: fit-content; min-width: 60%" href="indexEmployer.html" class="w3-round-large w3-bar-item w3-button w3-margin-top w3-margin-left">Accueil</a>
+    <a style="width: fit-content; min-width: 60%" href="NosApplicationEmployer.html" class="w3-round-large w3-bar-item w3-button w3-margin-top w3-margin-left">Nos applications</a>
+    <a style="width: fit-content; min-width: 60%" href="demandeDeDroitsEmployer.html" class="w3-round-large w3-bar-item w3-button w3-margin-top w3-margin-left">Demande de droits</a>
+    <a style="width: fit-content; min-width: 60%" href="acountEmployer.html" class="w3-round-large w3-bar-item w3-button w3-margin-top w3-margin-left">Parametres</a>
+    <a style="width: fit-content; min-width: 60%" href="helpEmployer.html" class="w3-round-large w3-bar-item w3-button w3-margin-top w3-margin-left">Help & Support</a>
+
+    <a class="w3-bar-item w3-button w3-red w3-margin-top w3-round-large w3-center w3-margin-left" style="width: fit-content">Déconnexion</a>
+</nav>
+
+<!-- Main content -->
+<div class="w3-main" style="width: 100%; display: flex; justify-content: center">
+    <!-- Header -->
+    <div class="header-section w3-center w3-card w3-round-large w3-mobile" style="width: 60%; display: flex; justify-content: space-between; align-items: center; padding: 10px; ">
+        <div style="display: flex; align-items: center;">
+            <button class="w3-bar-item w3-button w3-hover-scale w3-text-dark-grey w3-round-large w3-margin-right" onclick="w3_open()">
                 <i class="fa fa-bars"></i>
             </button>
-        </div>
-
-        <div class="w3-bar-item w3-container">
-            <img src="logo.png" alt="Logo">
-        </div>
-
-        <div class="w3-bar-item ">
-            <button class="w3-bar-item w3-button w3-hover-text-grey" onclick="openPopup()">
+            <h3 class="w3-bold" style="color: green; margin: 0;">
+                Nos Applications
+            </h3>
+            <span class="w3-badge w3-button w3-green w3-padding" style="border-radius: 20px; margin-left: 10px;" onclick="window.location.href='../Manager/indexManager.html';">Employé</span>
+            <button class="w3-bar-item w3-button w3-hover-text-grey w3-margin-left w3-round-large" onclick="openPopup()">
                 <i class="fa fa-bell"></i>
             </button>
         </div>
-    </div>
-
-    <div class="w3-bar-item w3-hide-small w3-hide-medium w3-center">
-        <h2>Accueil</h2>
-    </div>
-
-
-
-    <div class="w3-bar-item w3-right">
-        <button class="w3-button w3-hover-text-grey" onclick="window.location.href='../Manager/indexManager.html';">
-            <p class="">Employer</p>
-        </button>
-        <button class="w3-button w3-hover-text-grey" onclick="window.location.href='acountEmployer.html';">
+        <button class="w3-button w3-hover-text-grey w3-padding-top w3-round-large" onclick="window.location.href='acountEmployer.html';">
             <img src="../res/pp.png" class="w3-circle" alt="PP" style="height:40px;">
             <p class="">sandrine</p>
         </button>
     </div>
-</div>
 
-<!-- Sidebar mobile-->
-<nav class="w3-sidebar w3-bar-block w3-dark-grey w3-card w3-animate-left " id="mobileSidebar">
-    <button onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-margin-top">Close &times;</button>
-    <h1 class="w3-bar-item w3-text-theme w3-margin-top">Menu</h1>
-    <a href="indexEmployer.html" class="w3-bar-item w3-button w3-margin-top">Accueil</a>
-    <a href="NosApplicationEmployer.html" class="w3-bar-item w3-button w3-margin-top">Nos applications</a>
-    <a href="demandeDeDroitsEmployer.html" class="w3-bar-item w3-button w3-margin-top">Demande de droits</a>
-    <a href="acountEmployer.html" class="w3-bar-item w3-button w3-margin-top">Paramètres</a>
-    <a href="helpEmployer.html" class="w3-bar-item w3-button w3-margin-top">Aide et support</a>
-    <a href="deconexion.html" class="w3-bar-item w3-button w3-margin-top">Déconnexion</a>
-</nav>
-
-<!-- Main content -->
-<div class="w3-main">
     <div class="w3-display-middle w3-card w3-round-large w3-light-grey" style="width: 60%; margin-top: 50px">
-
         <!-- Barre de recherche au-dessus -->
         <div class="w3-container w3-padding">
             <input class="w3-input w3-border w3-round" type="text" placeholder="Rechercher parmis les Apps..." id="searchInput" onkeyup="searchApp()">
         </div>
-
-        <!-- Bloc déroulant avec scrollbar -->
 
         <div class="w3-container w3-padding w3-border w3-round-large w3-light-grey w3-white" style="height: 70vh; overflow-y: scroll;">
             <!-- Contenu des applications avec icônes et titres -->
@@ -158,35 +139,41 @@
 </div>
 
 <!-- Popup -->
-<div id="notificationPopup" class="w3-modal" style="display:none;">
-    <div class="w3-modal-content w3-card-4 w3-animate-zoom">
+<div id="notificationPopup" class="w3-modal w3-round-large" style="display:none;">
+    <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-round-large w3-responsive" style="width: 50%; max-width: 800px; max-height: 85vh;">
         <header class="w3-container w3-green">
             <span onclick="closePopup()" class="w3-button w3-display-topright">&times;</span>
             <h2>Notifications</h2>
         </header>
-        <div class="w3-container">
-            <p>Voici vos notifications :</p>
-            <div class="w3-panel w3-center w3-border-blue w3-border w3-round-xlarge w3-margin-bottom">
-                <h3 class="w3-color-blue" >Demande d'acces</h3>
-                <div class="">
-                    <p class="w3-left">App 1</p><p class="w3-right">22/09/2024</p>
+        <div class="w3-container w3-padding-32 w3-light-grey">
+            <!-- Notifications List -->
+            <div class="w3-container w3-white w3-card w3-round-large w3-padding">
+                <!-- Notification 1 -->
+                <div class="w3-container w3-border-bottom w3-padding-16">
+                    <p><strong>Date :</strong> 22/09/2024</p>
+                    <p><strong>Statut :</strong> <span class="w3-text-green">Approuvé</span></p>
+                    <p><strong>Demande :</strong> Accès à l'application de Gestion</p>
+                    <p><strong>Décision :</strong> Votre demande a été approuvée.</p>
                 </div>
-            </div>
-            <div class="w3-panel w3-center w3-border-green w3-border w3-round-xlarge w3-margin-bottom">
-                <h3 style="" >Approbation</h3>
-                <div class="">
-                    <p class="w3-left">App 1</p><p class="w3-right">23/09/2024</p>
+
+                <!-- Notification 2 -->
+                <div class="w3-container w3-border-bottom w3-padding-16">
+                    <p><strong>Date :</strong> 20/09/2024</p>
+                    <p><strong>Statut :</strong> <span class="w3-text-red">Refusé</span></p>
+                    <p><strong>Demande :</strong> Accès à l'application de Comptabilité</p>
+                    <p><strong>Explication du Refus :</strong> Votre demande a été refusée en raison d'un accès restreint à cette application pour votre rôle actuel.</p>
                 </div>
-            </div>
-            <div class="w3-panel w3-center w3-border-orange w3-border w3-round-xlarge w3-margin-bottom">
-                <h3 style="" >Rapelle de révocation</h3>
-                <div class="">
-                    <p class="w3-left">App 1</p><p class="w3-right">24/09/2024</p>
+
+                <!-- Notification 3 -->
+                <div class="w3-container w3-padding-16">
+                    <p><strong>Date :</strong> 15/09/2024</p>
+                    <p><strong>Statut :</strong> <span class="w3-text-orange">Rappel de Révocation</span></p>
+                    <p><strong>Accès :</strong> Votre accès à l'application RH sera révoqué le 30/09/2024. Veuillez contacter votre manager si vous souhaitez prolonger cet accès.</p>
                 </div>
             </div>
         </div>
-        <footer class="w3-container w3-green">
-            <button onclick="closePopup()" class="w3-button w3-lightgreen">Fermer</button>
+        <footer class="w3-container" style="text-align: center; padding: 16px;">
+            <button onclick="closePopup()" class="w3-button" style="background-color: #f44336; color: white; padding: 10px 20px; border-radius: 8px; font-size: 16px;">Fermer</button>
         </footer>
     </div>
 </div>
