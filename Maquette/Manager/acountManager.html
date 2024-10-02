@@ -9,76 +9,78 @@
 </head>
 <body style="min-height: 100vh;">
 
-<!-- Navbar -->
-<div class="w3-bar w3-green w3-top w3-container w3-cell w3-cell-middle">
-
-  <div class="w3-bar-item w3-container w3-rest">
-    <button class="w3-bar-item w3-button w3-hover-none w3-hover-text-grey" onclick="w3_open()">
-      <i class="fa fa-bars"></i>
-    </button>
-  </div>
-
-  <div class="w3-bar-item w3-container w3-rest">
-    <img src="logo.png" alt="Logo">
-  </div>
-
-  <div class="w3-bar-item w3-rest">
-    <button class="w3-bar-item w3-button w3-hover-text-grey" onclick="openPopup()">
-      <i class="fa fa-bell"></i>
-    </button>
-  </div>
-
-  <div class="w3-bar-item w3-hide-small w3-hide-medium w3-rest">
-    <h2>Mon compte</h2>
-  </div>
-
-  <div class="w3-bar-item w3-rest">
-    <button class="w3-button w3-hover-text-grey" onclick="window.location.href='../Manager/indexManager.html';">
-      <p class="">Manager</p>
-    </button>
-  </div>
-
-  <div class="w3-bar-item w3-rest">
-    <button class="w3-button w3-hover-text-grey" onclick="window.location.href='acountManager.html';">
-      <img src="../res/pp.png" class="w3-circle" alt="PP" style="height:40px;">
-      <p class="">Lina</p>
-    </button>
-  </div>
-</div>
-
 <!-- Sidebar mobile-->
-<nav class="w3-sidebar w3-bar-block w3-green w3-card w3-animate-left " id="mobileSidebar">
-  <button onclick="w3_close()" class="w3-bar-item w3-button w3-large">Close &times;</button>
-  <a href="indexManager.html" class="w3-bar-item w3-button w3-margin-top">Accueil</a>
-  <a href="nosApplicationsManager.html" class="w3-bar-item w3-button w3-margin-top">Nos applications</a>
-  <a href="gestionEmployerManager.html" class="w3-bar-item w3-button w3-margin-top">Gestions des employer</a>
-  <a href="demandeDeDroitsManager.html" class="w3-bar-item w3-button w3-margin-top">Géré demande de droits</a>
-  <a href="acountManager.html" class="w3-bar-item w3-button w3-margin-top">Paramètres</a>
-  <a href="helpManager.html" class="w3-bar-item w3-button w3-margin-top">Aide et support</a>
-  <a href="../Employer/deconexion.html" class="w3-bar-item w3-button w3-margin-top">Déconnexion</a>
+<nav class="w3-sidebar w3-bar-block w3-dark-grey w3-card w3-animate-left" id="mobileSidebar" style="min-width: 14%; width: fit-content">
+  <button onclick="w3_close()" class="w3-bar-item w3-button w3-round-large w3-margin-top">Close &times;</button>
+  <h3 class="w3-bar-item w3-text-theme w3-margin-top">Menu</h3>
+  <a style="width: fit-content; min-width: 60%" href="indexManager.html" class="w3-round-large w3-bar-item w3-button w3-margin-top w3-margin-left">Accueil</a>
+  <a style="width: fit-content; min-width: 60%" href="nosApplicationsManager.html" class="w3-round-large w3-bar-item w3-button  w3-margin-left">Nos applications</a>
+  <a style="width: fit-content; min-width: 60%" href="gestionEmployerManager.html" class="w3-round-large w3-bar-item w3-button  w3-margin-left">Gestion Employer</a>
+  <a style="width: fit-content; min-width: 60%" href="demandeDeDroitsManager.html" class="w3-round-large w3-bar-item w3-button  w3-margin-left">Géré demande de droits</a>
+  <h3 class="w3-bar-item w3-margin-top">Paramètres Utilisateur</h3>
+  <a style="width: fit-content; min-width: 60%" class="w3-round-large w3-bar-item w3-button w3-margin-left">Profils</a>
+  <a style="width: fit-content; min-width: 60%" class="w3-round-large w3-bar-item w3-button w3-margin-left">Confidentialité & Sécurité</a>
+  <a style="width: fit-content; min-width: 60%" class="w3-round-large w3-bar-item w3-button w3-margin-left">Appareils</a>
+
+  <h3 class="w3-bar-item w3-margin-top">Paramètres Application</h3>
+  <a style="width: fit-content; min-width: 60%" class="w3-round-large w3-bar-item w3-button w3-margin-left">Apparence</a>
+  <a style="width: fit-content; min-width: 60%" class="w3-round-large w3-bar-item w3-button w3-margin-left">Accessibilité</a>
+  <a style="width: fit-content; min-width: 60%" class="w3-round-large w3-bar-item w3-button w3-margin-left">Raccourcis</a>
+  <a style="width: fit-content; min-width: 60%" class="w3-round-large w3-bar-item w3-button w3-margin-left">Langue</a>
+  <a style="width: fit-content; min-width: 60%" class="w3-round-large w3-bar-item w3-button w3-margin-left">Notifications</a>
+  <a style="width: fit-content; min-width: 60%" class="w3-round-large w3-bar-item w3-button w3-margin-left">Demande de Droits</a>
+  <a style="width: fit-content; min-width: 60%" class="w3-round-large w3-bar-item w3-button w3-margin-left">Daltonien</a>
+  <a style="width: fit-content; min-width: 60%" class="w3-round-large w3-bar-item w3-button w3-margin-left">Support Vocal</a>
+
+  <a class="w3-bar-item w3-button w3-red w3-margin-top w3-round-large w3-center w3-margin-left" style="width: fit-content">Déconnexion</a>
 </nav>
 
 
 <!-- Main content -->
-<div class="w3-main" style="">
+<div class="w3-main" style="width: 100%; display: flex; justify-content: center">
+  <!-- Header -->
+  <div class="header-section w3-center w3-card w3-round-large" style="width: 60%; display: flex; justify-content: space-between; align-items: center; padding: 10px; ">
+    <div style="display: flex; align-items: center;">
+      <button class="w3-bar-item w3-button w3-hover-scale w3-text-dark-grey w3-round-large w3-margin-right" onclick="w3_open()">
+        <i class="fa fa-bars"></i>
+      </button>
+
+      <h3 class="w3-bold">
+        Demande de droits
+      </h3>
+      <span class="w3-badge w3-button w3-dark-grey w3-padding" style="border-radius: 20px; margin-left: 10px;" onclick="window.location.href='../Employer/indexEmployer.html';">Manager</span>
+
+      <button class="w3-bar-item w3-button w3-hover-text-grey w3-margin-left w3-round-large" onclick="openPopup()">
+        <i class="fa fa-bell"></i>
+      </button>
+    </div>
+    <button class="w3-button w3-hover-text-grey w3-padding-top w3-round-large" onclick="window.location.href='acountEmployer.html';">
+      <img src="../res/pp.png" class="w3-circle" alt="PP" style="height:40px;">
+      <p class="">Lina</p>
+    </button>
+  </div>
   <div class="w3-display-middle w3-card w3-round-large w3-light-grey" style="width: 60%; margin-top:50px">
     <div class="w3-container w3-round-large w3-margin w3-card-4" style="min-height: 90px">
       <img src="../res/pp.png" alt="pp" class="w3-third w3-circle" style="width: 150px">
       <p class="w3-rest w3-center">Lina</p>
-      <button class="w3-button w3-green w3-right w3-round-large">Modifier la Photo de profile</button>
+      <button class="w3-button w3-dark-grey w3-right w3-round-large">Modifier la Photo de profile</button>
     </div>
 
-    <div class="w3-container w3-card-4 w3-round-large" style="">
+    <div class="w3-container w3-card-4 w3-round-large">
       <form class="w3-container">
         <div class="w3-row-padding">
           <div class="w3-container w3-padding-16 w3-padding-large w3-half">
             <label>Nom d'utilisateur
               <input class="w3-input w3-animate-input" type="text" placeholder="Lina" style="width:70%">
             </label>
-            <label class="w3-margin-top">Email
+          </div>
+          <div class="w3-container w3-padding-16 w3-padding-large w3-half">
+            <label>Email
               <input class="w3-input w3-animate-input" type="email" placeholder="lina@gmail.com" style="width:70%">
             </label>
-            <label class="w3-margin-top">Telephone
+          </div>
+          <div class="w3-container w3-padding-16 w3-padding-large w3-half">
+            <label>Téléphone
               <input class="w3-input w3-animate-input" type="tel" placeholder="06 .. .. .. 94" style="width:70%">
             </label>
           </div>
@@ -86,14 +88,11 @@
             <label>Modifier mot de passe
               <input class="w3-input w3-animate-input" type="password" placeholder="" style="width:70%">
             </label>
+            <button class="w3-button w3-green w3-round-large" style="margin-top: 10px;">Enregistrer les modifications</button>
           </div>
-        </div>
-        <div class="w3-padding-large w3-margin-bottom">
-          <button class="w3-btn w3-green w3-round-large">Soumettre la demande</button>
         </div>
       </form>
     </div>
-  </div>
 </div>
 
 <!-- Popup -->
