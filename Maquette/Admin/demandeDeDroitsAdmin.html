@@ -4,13 +4,11 @@
     <title>Maquette Web</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <meta charset="UTF-8">
 
 </head>
 <body style="min-height: 100vh;">
 
-<!-- Sidebar-->
 <nav class="w3-sidebar w3-bar-block w3-dark-grey w3-card w3-animate-left" id="mobileSidebar" style="min-width: 14%; width: fit-content">
     <button onclick="w3_close()" class="w3-bar-item w3-button w3-round-large w3-margin-top">Close &times;</button>
     <h3 class="w3-bar-item w3-text-theme w3-margin-top">Menu</h3>
@@ -18,7 +16,7 @@
     <a style="width: fit-content; min-width: 60%" href="nosApplicationsAdmin.html" class="w3-round-large w3-bar-item w3-button w3-margin-top w3-margin-left">Nos applications</a>
     <a style="width: fit-content; min-width: 60%" href="gestionEmployerAdmin.html" class="w3-round-large w3-bar-item w3-button w3-margin-top w3-margin-left">Gestion Employer</a>
     <a style="width: fit-content; min-width: 60%" href="demandeDeDroitsAdmin.html" class="w3-round-large w3-bar-item w3-button w3-margin-top w3-margin-left">Géré demande de droits</a>
-    <a style="width: fit-content; min-width: 60%" href="ProfileTypeAdmin.html" class="w3-round-large w3-bar-item w3-button w3-margin-top w3-margin-left">Profiles type</a>
+    <a style="width: fit-content; min-width: 60%" href="gestionEmployerAdmin.html" class="w3-round-large w3-bar-item w3-button w3-margin-top w3-margin-left">Profiles type</a>
     <a style="width: fit-content; min-width: 60%" href="acountAdmin.html" class="w3-round-large w3-bar-item w3-button w3-margin-top w3-margin-left">Parametres</a>
     <a style="width: fit-content; min-width: 60%" href="helpAdmin.html" class="w3-round-large w3-bar-item w3-button w3-margin-top w3-margin-left">Help & Support</a>
 
@@ -50,64 +48,41 @@
         </button>
     </div>
 
-    <div class="w3-display-middle w3-card w3-round-large w3-light-grey" style="width: 58%; margin-top: 50px;">
-        <!-- Barre de recherche au-dessus -->
-        <div class="w3-container w3-padding">
-            <input class="w3-input w3-border w3-round" type="text" placeholder="Rechercher parmis les favoris..." id="searchInput" onkeyup="searchApp()">
-        </div>
-        <!-- Bloc déroulant avec scrollbar -->
-        <div class="w3-container w3-padding w3-border w3-round-large w3-light-grey w3-white" style="height: 70vh; overflow-y: scroll;">
-            <!-- Contenu des applications avec icônes et titres -->
-            <div id="appList" class="w3-row-padding">
-                <div class="w3-col s12 m4 l4 w3-padding">
-                    <div class="w3-card w3-padding w3-center">
-                        <a href="../app1.html">
-                            <i class="fa fa-apple w3-xlarge"></i>
-                            <p>App1</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="w3-col s12 m4 l4 w3-padding">
-                    <div class="w3-card w3-padding w3-center">
-                        <a href="../app1.html">
-                            <i class="fa fa-android w3-xlarge"></i>
-                            <p>App2</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="w3-col s12 m4 l4 w3-padding">
-                    <div class="w3-card w3-padding w3-center">
-                        <a href="../app1.html">
-                            <i class="fa fa-windows w3-xlarge"></i>
-                            <p>App3</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="w3-col s12 m4 l4 w3-padding">
-                    <div class="w3-card w3-padding w3-center">
-                        <a href="../app1.html">
-                            <i class="fa fa-linux w3-xlarge"></i>
-                            <p>App4</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="w3-col s12 m4 l4 w3-padding">
-                    <div class="w3-card w3-padding w3-center">
-                        <a href="../app1.html">
-                            <i class="fa fa-gamepad w3-xlarge"></i>
-                            <p>App5</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="w3-col s12 m4 l4 w3-padding">
-                    <div class="w3-card w3-padding w3-center">
-                        <a href="../app1.html">
-                            <i class="fa fa-code w3-xlarge"></i>
-                            <p>App6</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
+    <div class="w3-card-4 w3-round-large w3-light-grey w3-display-middle w3-padding-top" style="max-width: 75%;min-width: 55%;">
+        <h2 class="w3-center">Demande de droits</h2>
+        <div class=" w3-round-large w3-container w3-responsive">
+            <table class="w3-table-all w3-round-large">
+                <tr>
+                    <th>Nom de l'employer</th>
+                    <th>Application</th>
+                    <th>Date de la demande</th>
+                    <th>Type de droit</th>
+                    <th>Statut</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>Patrik</td>
+                    <td>App Gestion</td>
+                    <td>22/09/2024</td>
+                    <td>Acces complet</td>
+                    <td>En attente</td>
+                    <td>
+                        <button class="w3-button w3-green w3-round">Approuver</button>
+                        <button class="w3-button w3-red w3-round">Rejeter</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Christophe</td>
+                    <td>App Comptable</td>
+                    <td>21/09/2024</td>
+                    <td>Acces lecture</td>
+                    <td>En cours</td>
+                    <td>
+                        <button class="w3-button w3-green w3-round">Approuver</button>
+                        <button class="w3-button w3-red w3-round">Rejeter</button>
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
 </div>

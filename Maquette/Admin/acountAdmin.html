@@ -4,7 +4,6 @@
     <title>Maquette Web</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <meta charset="UTF-8">
 
 </head>
@@ -19,10 +18,25 @@
     <a style="width: fit-content; min-width: 60%" href="gestionEmployerAdmin.html" class="w3-round-large w3-bar-item w3-button w3-margin-top w3-margin-left">Gestion Employer</a>
     <a style="width: fit-content; min-width: 60%" href="demandeDeDroitsAdmin.html" class="w3-round-large w3-bar-item w3-button w3-margin-top w3-margin-left">Géré demande de droits</a>
     <a style="width: fit-content; min-width: 60%" href="ProfileTypeAdmin.html" class="w3-round-large w3-bar-item w3-button w3-margin-top w3-margin-left">Profiles type</a>
-    <a style="width: fit-content; min-width: 60%" href="acountAdmin.html" class="w3-round-large w3-bar-item w3-button w3-margin-top w3-margin-left">Parametres</a>
+
+    <h3 class="w3-bar-item w3-margin-top">Paramètres Utilisateur</h3>
+    <a style="width: fit-content; min-width: 60%" class="w3-round-large w3-bar-item w3-button w3-margin-left">Profils</a>
+    <a style="width: fit-content; min-width: 60%" class="w3-round-large w3-bar-item w3-button w3-margin-left">Confidentialité & Sécurité</a>
+    <a style="width: fit-content; min-width: 60%" class="w3-round-large w3-bar-item w3-button w3-margin-left">Appareils</a>
+
+    <h3 class="w3-bar-item w3-margin-top">Paramètres Application</h3>
+    <a style="width: fit-content; min-width: 60%" class="w3-round-large w3-bar-item w3-button w3-margin-left">Apparence</a>
+    <a style="width: fit-content; min-width: 60%" class="w3-round-large w3-bar-item w3-button w3-margin-left">Accessibilité</a>
+    <a style="width: fit-content; min-width: 60%" class="w3-round-large w3-bar-item w3-button w3-margin-left">Raccourcis</a>
+    <a style="width: fit-content; min-width: 60%" class="w3-round-large w3-bar-item w3-button w3-margin-left">Langue</a>
+    <a style="width: fit-content; min-width: 60%" class="w3-round-large w3-bar-item w3-button w3-margin-left">Notifications</a>
+    <a style="width: fit-content; min-width: 60%" class="w3-round-large w3-bar-item w3-button w3-margin-left">Demande de Droits</a>
+    <a style="width: fit-content; min-width: 60%" class="w3-round-large w3-bar-item w3-button w3-margin-left">Daltonien</a>
+    <a style="width: fit-content; min-width: 60%" class="w3-round-large w3-bar-item w3-button w3-margin-left">Support Vocal</a>
+
     <a style="width: fit-content; min-width: 60%" href="helpAdmin.html" class="w3-round-large w3-bar-item w3-button w3-margin-top w3-margin-left">Help & Support</a>
 
-    <a href="../index.html" class="w3-bar-item w3-button w3-red w3-margin-top w3-round-large w3-center w3-margin-left" style="width: fit-content">Déconnexion</a>
+    <a href="../index.html" class="w3-bar-item w3-button w3-red w3-margin-top w3-round-large w3-center w3-margin-left w3-margin-bottom" style="width: fit-content">Déconnexion</a>
 </nav>
 
 
@@ -36,7 +50,7 @@
             </button>
 
             <h3 class="w3-bold">
-                Acceuil
+                Utilisateur
             </h3>
             <span class="w3-badge w3-button w3-dark-grey w3-padding" style="border-radius: 20px; margin-left: 10px;" onclick="window.location.href='../Employer/indexEmployer.html';">Admin</span>
 
@@ -50,72 +64,48 @@
         </button>
     </div>
 
-    <div class="w3-display-middle w3-card w3-round-large w3-light-grey" style="width: 58%; margin-top: 50px;">
-        <!-- Barre de recherche au-dessus -->
-        <div class="w3-container w3-padding">
-            <input class="w3-input w3-border w3-round" type="text" placeholder="Rechercher parmis les favoris..." id="searchInput" onkeyup="searchApp()">
+    <div class="w3-display-middle w3-card w3-round-large w3-light-grey" style="width: 60%; margin-top:50px">
+
+        <div class="w3-container w3-round-large w3-margin w3-card-4" style="min-height: 90px">
+            <img src="../res/pp.png" alt="pp" class="w3-third w3-circle w3-padding" style="width: 15%">
+            <p class="w3-rest w3-center">Régis</p>
+            <button class="w3-button w3-dark-grey w3-right w3-round-large">Modifier la Photo de profile</button>
         </div>
-        <!-- Bloc déroulant avec scrollbar -->
-        <div class="w3-container w3-padding w3-border w3-round-large w3-light-grey w3-white" style="height: 70vh; overflow-y: scroll;">
-            <!-- Contenu des applications avec icônes et titres -->
-            <div id="appList" class="w3-row-padding">
-                <div class="w3-col s12 m4 l4 w3-padding">
-                    <div class="w3-card w3-padding w3-center">
-                        <a href="../app1.html">
-                            <i class="fa fa-apple w3-xlarge"></i>
-                            <p>App1</p>
-                        </a>
+
+        <div class="w3-container w3-card-4 w3-round-large">
+            <form class="w3-container">
+                <div class="w3-row-padding">
+                    <div class="w3-container w3-padding-16 w3-padding-large w3-half">
+                        <label>Nom d'utilisateur
+                            <input class="w3-input w3-animate-input" type="text" placeholder="Régis" style="width:70%">
+                        </label>
+                    </div>
+                    <div class="w3-container w3-padding-16 w3-padding-large w3-half">
+                        <label>Email
+                            <input class="w3-input w3-animate-input" type="email" placeholder="régis@etu.u-pec.fr" style="width:70%">
+                        </label>
+                    </div>
+                    <div class="w3-container w3-padding-16 w3-padding-large w3-half">
+                        <label>Téléphone
+                            <input class="w3-input w3-animate-input" type="tel" placeholder="09 .. .. .. 94" style="width:70%">
+                        </label>
+                    </div>
+                    <div class="w3-container w3-padding-16 w3-padding-large w3-half">
+                        <label>Modifier mot de passe
+                            <input class="w3-input w3-animate-input" type="password" placeholder="" style="width:70%">
+                        </label>
+                        <button class="w3-button w3-green w3-round-large" style="margin-top: 10px;">Enregistrer les modifications</button>
                     </div>
                 </div>
-                <div class="w3-col s12 m4 l4 w3-padding">
-                    <div class="w3-card w3-padding w3-center">
-                        <a href="../app1.html">
-                            <i class="fa fa-android w3-xlarge"></i>
-                            <p>App2</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="w3-col s12 m4 l4 w3-padding">
-                    <div class="w3-card w3-padding w3-center">
-                        <a href="../app1.html">
-                            <i class="fa fa-windows w3-xlarge"></i>
-                            <p>App3</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="w3-col s12 m4 l4 w3-padding">
-                    <div class="w3-card w3-padding w3-center">
-                        <a href="../app1.html">
-                            <i class="fa fa-linux w3-xlarge"></i>
-                            <p>App4</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="w3-col s12 m4 l4 w3-padding">
-                    <div class="w3-card w3-padding w3-center">
-                        <a href="../app1.html">
-                            <i class="fa fa-gamepad w3-xlarge"></i>
-                            <p>App5</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="w3-col s12 m4 l4 w3-padding">
-                    <div class="w3-card w3-padding w3-center">
-                        <a href="../app1.html">
-                            <i class="fa fa-code w3-xlarge"></i>
-                            <p>App6</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
+            </form>
         </div>
     </div>
 </div>
 
-<!-- Notif -->
+<!-- Popup -->
 <div id="notificationPopup" class="w3-modal w3-round-large" style="display:none;">
     <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-round-large">
-        <header class="w3-container w3-dark-grey">
+        <header class="w3-container w3-green">
             <span onclick="closePopup()" class="w3-button w3-display-topright">&times;</span>
             <h2>Notifications</h2>
         </header>
@@ -140,8 +130,8 @@
                 </div>
             </div>
         </div>
-        <footer class="w3-container w3-dark-grey">
-            <button onclick="closePopup()" class="w3-button w3-grey">Fermer</button>
+        <footer class="w3-container w3-green">
+            <button onclick="closePopup()" class="w3-button w3-lightgreen">Fermer</button>
         </footer>
     </div>
 </div>
@@ -163,6 +153,7 @@
         document.getElementById("notificationPopup").style.display = "none";
     }
 </script>
+
 
 </body>
 </html>
