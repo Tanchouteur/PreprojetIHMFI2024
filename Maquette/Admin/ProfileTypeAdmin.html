@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Maquette Web</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <meta charset="UTF-8">
+
+</head>
+<body style="min-height: 100vh;">
+
+<!-- Sidebar-->
+<nav class="w3-sidebar w3-bar-block w3-dark-grey w3-card w3-animate-left" id="mobileSidebar" style="min-width: 14%; width: fit-content">
+    <button onclick="w3_close()" class="w3-bar-item w3-button w3-round-large w3-margin-top">Close &times;</button>
+    <h3 class="w3-bar-item w3-text-theme w3-margin-top">Menu</h3>
+    <a style="width: fit-content; min-width: 60%" href="indexAdmin.html" class="w3-round-large w3-bar-item w3-button w3-margin-top w3-margin-left">Accueil</a>
+    <a style="width: fit-content; min-width: 60%" href="nosApplicationsAdmin.html" class="w3-round-large w3-bar-item w3-button w3-margin-top w3-margin-left">Nos applications</a>
+    <a style="width: fit-content; min-width: 60%" href="gestionEmployerAdmin.html" class="w3-round-large w3-bar-item w3-button w3-margin-top w3-margin-left">Gestion Employer</a>
+    <a style="width: fit-content; min-width: 60%" href="demandeDeDroitsAdmin.html" class="w3-round-large w3-bar-item w3-button w3-margin-top w3-margin-left">Géré demande de droits</a>
+    <a style="width: fit-content; min-width: 60%" href="ProfileTypeAdmin.html" class="w3-round-large w3-bar-item w3-button w3-margin-top w3-margin-left">Profiles type</a>
+    <a style="width: fit-content; min-width: 60%" href="acountAdmin.html" class="w3-round-large w3-bar-item w3-button w3-margin-top w3-margin-left">Parametres</a>
+    <a style="width: fit-content; min-width: 60%" href="helpAdmin.html" class="w3-round-large w3-bar-item w3-button w3-margin-top w3-margin-left">Help & Support</a>
+
+    <a href="../index.html" class="w3-bar-item w3-button w3-red w3-margin-top w3-round-large w3-center w3-margin-left" style="width: fit-content">Déconnexion</a>
+</nav>
+
+
+<!-- Main content -->
+<div class="w3-main" style="width: 100%; display: flex; justify-content: center">
+    <!-- Header -->
+    <div class="header-section w3-center w3-card w3-round-large" style="width: 60%; display: flex; justify-content: space-between; align-items: center; padding: 10px; ">
+        <div style="display: flex; align-items: center;">
+            <button class="w3-bar-item w3-button w3-hover-scale w3-text-dark-grey w3-round-large w3-margin-right" onclick="w3_open()">
+                <i class="fa fa-bars"></i>
+            </button>
+
+            <h3 class="w3-bold">
+                Gestion profiles type
+            </h3>
+            <span class="w3-badge w3-button w3-dark-grey w3-padding" style="border-radius: 20px; margin-left: 10px;" onclick="window.location.href='../Employer/indexEmployer.html';">Admin</span>
+
+            <button class="w3-bar-item w3-button w3-hover-text-grey w3-margin-left w3-round-large" onclick="openPopup()">
+                <i class="fa fa-bell"></i>
+            </button>
+        </div>
+        <button class="w3-button w3-hover-text-grey w3-padding-top w3-round-large" onclick="window.location.href='acountEmployer.html';">
+            <img src="../res/pp.png" class="w3-circle" alt="PP" style="height:40px;">
+            <p class="">Régis</p>
+        </button>
+    </div>
+
+    <div class="w3-display-middle w3-card w3-round-large w3-light-grey" style="width: 58%; margin-top: 50px;">
+        <h2 class="w3-center">Liste des profils types</h2>
+        <div class="w3-container w3-padding">
+            <button class="w3-button w3-green w3-round w3-margin" onclick="openAdd()">Ajouter un profil</button>
+            <table class="w3-table-all w3-round-large">
+                <tr>
+                    <th>Profils</th>
+                    <th>Type</th>
+                    <th>Droits</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>Profils 1</td>
+                    <td>Admin</td>
+                    <td>Acces complet</td>
+                    <td>
+                        <button class="w3-button w3-dark-grey w3-round" onclick="openModif()">Modifier</button>
+                        <button class="w3-button w3-red w3-round">Supprimer</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Profils 2</td>
+                    <td>Manager</td>
+                    <td>Acces modification</td>
+                    <td>
+                        <button class="w3-button w3-dark-grey w3-round" onclick="openModif()">Modifier</button>
+                        <button class="w3-button w3-red w3-round">Supprimer</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Profils 3</td>
+                    <td>Eployer</td>
+                    <td>Acces lecture</td>
+                    <td>
+                        <button class="w3-button w3-dark-grey w3-round" onclick="openModif()">Modifier</button>
+                        <button class="w3-button w3-red w3-round">Supprimer</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div id="addPopup" class="w3-modal w3-round-large" style="display:none;">
+    <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-round-large">
+        <header class="w3-container w3-dark-grey w3-round-large">
+            <span onclick="closeAdd()" class="w3-button w3-display-topright w3-round-large">&times;</span>
+            <h2>Ajouter un profil</h2>
+        </header>
+        <div class="w3-container">
+            <form class="w3-container">
+                <div class="w3-row-padding">
+                    <div class="w3-container w3-padding-16 w3-padding-large w3-half">
+                        <label class="">Nom du profil
+                            <input class="w3-input w3-animate-input w3-margin-bottom" type="text" placeholder="Nom du profil..." style="width:100%">
+                        </label>
+                        <label class="">Type de profil
+                            <select class="w3-select w3-margin-bottom" name="option" id="selectPa">
+                                <option value="" disabled selected>Selectionnez type de profil</option>
+                                <option value="1">Administrateur</option>
+                                <option value="2">Manager</option>
+                                <option value="3">Employer</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="w3-container w3-padding-16 w3-padding-large w3-half">
+                        <label for="selectDa">Accorder un droit</label>
+                        <select class="w3-select w3-margin-bottom" name="option" id="selectDa">
+                            <option value="" disabled selected>Selectionnez type de droit</option>
+                            <option value="1">Acces complet</option>
+                            <option value="2">Ecriture</option>
+                            <option value="3">Lecture</option>
+                        </select>
+
+                        <button class="w3-btn w3-green w3-round w3-left">Ajouter</button>
+                        <button class="w3-btn w3-red w3-round w3-right">Anuler</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <footer class="w3-container w3-dark-grey w3-round-large">
+            <button onclick="closeAdd()" class="w3-button w3-lightgreen w3-round-large">Fermer</button>
+        </footer>
+    </div>
+</div>
+
+<div id="modificationPopup" class="w3-modal w3-round-large" style="display:none;">
+    <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-round-large">
+        <header class="w3-container w3-dark-grey w3-round-large">
+            <span onclick="closeModif()" class="w3-button w3-display-topright w3-round-large">&times;</span>
+            <h2>Détails du profil</h2>
+        </header>
+        <div class="w3-container">
+            <form class="w3-container">
+                <div class="w3-row-padding">
+                    <div class="w3-container w3-padding-16 w3-padding-large w3-half">
+                        <label class="">Nom du profil
+                            <input disabled class="w3-input w3-animate-input w3-margin-bottom" type="text" placeholder="Profil x" style="width:100%">
+                        </label>
+                        <label class="">Type de profil
+                            <select class="w3-select w3-margin-bottom" name="option" id="selectP">
+                                <option value="" disabled selected>Selectionnez type de profil</option>
+                                <option value="1">Administrateur</option>
+                                <option value="2">Manager</option>
+                                <option value="3">Employer</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="w3-container w3-padding-16 w3-padding-large w3-half">
+                        <label for="selectD">Accorder un droit</label>
+                        <select class="w3-select w3-margin-bottom" name="option" id="selectD">
+                            <option value="" disabled selected>Selectionnez type de droit</option>
+                            <option value="1">Acces complet</option>
+                            <option value="2">Ecriture</option>
+                            <option value="3">Lecture</option>
+                        </select>
+
+                        <button class="w3-btn w3-green w3-round w3-left">Mettre à jour</button>
+                        <button class="w3-btn w3-red w3-round w3-right">Anuler</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <footer class="w3-container w3-dark-grey w3-round-large">
+            <button onclick="closeModif()" class="w3-button w3-lightgreen w3-round-large">Fermer</button>
+        </footer>
+    </div>
+</div>
+
+<!-- Notif -->
+<div id="notificationPopup" class="w3-modal w3-round-large" style="display:none;">
+    <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-round-large">
+        <header class="w3-container w3-dark-grey">
+            <span onclick="closePopup()" class="w3-button w3-display-topright">&times;</span>
+            <h2>Notifications</h2>
+        </header>
+        <div class="w3-container">
+            <p>Voici vos notifications :</p>
+            <div class="w3-panel w3-center w3-border-blue w3-border w3-round-xlarge w3-margin-bottom">
+                <h3 class="w3-color-blue" >Demande d'acces</h3>
+                <div class="">
+                    <p class="w3-left">App 1</p><p class="w3-right">22/09/2024</p>
+                </div>
+            </div>
+            <div class="w3-panel w3-center w3-border-green w3-border w3-round-xlarge w3-margin-bottom">
+                <h3 style="" >Approbation</h3>
+                <div class="">
+                    <p class="w3-left">App 1</p><p class="w3-right">23/09/2024</p>
+                </div>
+            </div>
+            <div class="w3-panel w3-center w3-border-orange w3-border w3-round-xlarge w3-margin-bottom">
+                <h3 style="" >Rapelle de révocation</h3>
+                <div class="">
+                    <p class="w3-left">App 1</p><p class="w3-right">24/09/2024</p>
+                </div>
+            </div>
+        </div>
+        <footer class="w3-container w3-dark-grey">
+            <button onclick="closePopup()" class="w3-button w3-grey">Fermer</button>
+        </footer>
+    </div>
+</div>
+
+<script>
+    function w3_open() {
+        document.getElementById("mobileSidebar").style.display = "block";
+    }
+
+    function w3_close() {
+        document.getElementById("mobileSidebar").style.display = "none";
+    }
+
+    function openPopup() {
+        document.getElementById("notificationPopup").style.display = "block";
+    }
+
+    function closePopup() {
+        document.getElementById("notificationPopup").style.display = "none";
+    }
+    function openModif() {
+        document.getElementById("modificationPopup").style.display = "block";
+    }
+
+    function closeModif() {
+        document.getElementById("modificationPopup").style.display = "none";
+    }
+
+    function openAdd() {
+        document.getElementById("addPopup").style.display = "block";
+    }
+
+    function closeAdd() {
+        document.getElementById("addPopup").style.display = "none";
+    }
+</script>
+
+</body>
+</html>
