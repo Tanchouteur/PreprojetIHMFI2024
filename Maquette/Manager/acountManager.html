@@ -37,7 +37,7 @@
 
 
 <!-- Main content -->
-<div class="w3-main" style="width: 100%; display: flex; justify-content: center">
+<div class="w3-main" style="width: 100%; display: flex; justify-content: center; flex-direction: column; align-items: center;">
   <!-- Header -->
   <div class="header-section w3-center w3-card w3-round-large" style="width: 60%; display: flex; justify-content: space-between; align-items: center; padding: 10px; ">
     <div style="display: flex; align-items: center;">
@@ -46,7 +46,7 @@
       </button>
 
       <h3 class="w3-bold">
-        Utilisateur
+        Mon Compte
       </h3>
       <span class="w3-badge w3-button w3-dark-grey w3-padding w3-hide-small" style="border-radius: 20px; margin-left: 10px;" onclick="window.location.href='../Admin/indexAdmin.html';">Manager</span>
 
@@ -59,7 +59,9 @@
       <p class="">Lina</p>
     </button>
   </div>
-  <div class="w3-display-middle w3-card w3-round-large" style="width: 60%; margin-top:50px">
+
+  <!-- Main -->
+  <div class="w3-card w3-round-large w3-light-grey" style="min-width: 55%; width: fit-content; margin-top:20px">
     <div class="w3-container w3-round-large w3-margin w3-card-4 w3-padding w3-white" style="min-height: 90px; display: flex; align-items: center;">
       <img src="../res/pp.png" alt="pp" class="w3-third w3-circle" style="width: 15%; margin-right: 20px;">
       <div style="flex: 1;">
@@ -68,32 +70,36 @@
       </div>
     </div>
 
-    <div class="w3-container w3-card-4 w3-round-large">
+    <div class="w3-container w3-card-4 w3-round-large w3-white" style="min-width: 65%">
+
       <form class="w3-container">
+
         <div class="w3-row-padding">
           <div class="w3-container w3-padding-16 w3-padding-large w3-half">
             <label>Nom d'utilisateur
               <input class="w3-input w3-animate-input w3-round-large" type="text" placeholder="Lina" style="width:70%">
+            </label>
+
+            <label>Téléphone
+              <input class="w3-input w3-animate-input w3-round-large" type="tel" placeholder="06 .. .. .. 94" style="width:70%">
             </label>
           </div>
           <div class="w3-container w3-padding-16 w3-padding-large w3-half">
             <label>Email
               <input class="w3-input w3-animate-input w3-round-large" type="email" placeholder="lina@gmail.com" style="width:70%">
             </label>
-          </div>
-          <div class="w3-container w3-padding-16 w3-padding-large w3-half">
-            <label>Téléphone
-              <input class="w3-input w3-animate-input w3-round-large" type="tel" placeholder="06 .. .. .. 94" style="width:70%">
-            </label>
-          </div>
-          <div class="w3-container w3-padding-16 w3-padding-large w3-half">
+
             <label>Modifier mot de passe
               <input class="w3-input w3-animate-input w3-round-large" type="password" placeholder="" style="width:70%">
             </label>
             <button class="w3-button w3-green w3-round-large" style="margin-top: 10px;">Enregistrer les modifications</button>
           </div>
+
+
+
         </div>
       </form>
+
     </div>
   </div>
 </div>

@@ -23,7 +23,7 @@
 </nav>
 
 <!-- Main content -->
-<div class="w3-main" style="width: 100%; display: flex; justify-content: center">
+<div class="w3-main" style="width: 100%; display: flex; flex-direction: column; align-items: center;">
     <!-- Header -->
     <div class="header-section w3-center w3-card w3-round-large w3-mobile" style="width: 60%; display: flex; justify-content: space-between; align-items: center; padding: 10px; ">
         <div style="display: flex; align-items: center;">
@@ -44,7 +44,7 @@
         </button>
     </div>
 
-    <div class="w3-display-middle w3-card w3-round-large w3-light-grey" style="width: 60%; margin-top: 50px">
+    <div class=" w3-card w3-round-large w3-light-grey w3-margin" style="min-width: 60%; width: fit-content; margin-top: 50px;">
         <!-- Barre de recherche au-dessus -->
         <div class="w3-container w3-padding">
             <input class="w3-input w3-border w3-round" type="text" placeholder="Rechercher parmis les Apps..." id="searchInput" onkeyup="searchApp()">
