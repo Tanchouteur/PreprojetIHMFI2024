@@ -107,34 +107,29 @@
 
 <!-- Notif -->
 <div id="notificationPopup" class="w3-modal w3-round-large" style="display:none;">
-    <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-round-large">
-        <header class="w3-container w3-dark-grey">
-            <span onclick="closePopup()" class="w3-button w3-display-topright">&times;</span>
+    <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-round-large" style="min-width: 55%; width: fit-content; max-width: 85%; max-height: 85vh;">
+        <header class="w3-container w3-dark-grey w3-round-large">
+            <span onclick="closePopup()" class="w3-button w3-display-topright w3-round-large">&times;</span>
             <h2>Notifications</h2>
         </header>
-        <div class="w3-container">
-            <p>Voici vos notifications :</p>
-            <div class="w3-panel w3-center w3-border-blue w3-border w3-round-xlarge w3-margin-bottom">
-                <h3 class="w3-color-blue" >Demande d'acces</h3>
-                <div class="">
-                    <p class="w3-left">App 1</p><p class="w3-right">22/09/2024</p>
-                </div>
+        <div class="w3-container w3-card w3-margin w3-light-grey w3-round-large" >
+
+            <div class="w3-container w3-padding:16px w3-white w3-margin-bottom w3-round-large">
+                <h2 class="w3-dark-grey w3-round-large w3-padding" style="min-width: 60%; width: fit-content; max-width: 90%">Demandes de création de Droit</h2>
+                <ul class="w3-ul">
+                    <li>Alphonse Martin demande la création du droit "X" pour les managers <span class="w3-right">22/09/2024</span></li>
+                </ul>
             </div>
-            <div class="w3-panel w3-center w3-border-green w3-border w3-round-xlarge w3-margin-bottom">
-                <h3 style="" >Approbation</h3>
-                <div class="">
-                    <p class="w3-left">App 1</p><p class="w3-right">23/09/2024</p>
-                </div>
-            </div>
-            <div class="w3-panel w3-center w3-border-orange w3-border w3-round-xlarge w3-margin-bottom">
-                <h3 style="" >Rapelle de révocation</h3>
-                <div class="">
-                    <p class="w3-left">App 1</p><p class="w3-right">24/09/2024</p>
-                </div>
+
+            <div class="w3-container w3-padding:16px w3-white w3-margin-bottom">
+                <h2 class="w3-dark-grey w3-text-white w3-round-large w3-padding" style="min-width: 60%; width: fit-content; max-width: 90%">Demande de création Profils</h2>
+                <ul class="w3-ul">
+                    <li>Lina demande la création du profils "Interimaire"<span class="w3-right">28/09/2024</span></li>
+                </ul>
             </div>
         </div>
-        <footer class="w3-container w3-dark-grey">
-            <button onclick="closePopup()" class="w3-button w3-grey">Fermer</button>
+        <footer class="w3-container w3-dark-grey w3-round-large">
+            <button onclick="closePopup()" class="w3-button w3-grey w3-round-large">Fermer</button>
         </footer>
     </div>
 </div>
