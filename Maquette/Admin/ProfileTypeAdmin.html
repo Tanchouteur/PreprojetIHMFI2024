@@ -27,7 +27,7 @@
 
 
 <!-- Main content -->
-<div class="w3-main" style="width: 100%; display: flex; justify-content: center">
+<div class="w3-main" style="width: 100%; display: flex; align-items: center; flex-direction: column">
     <!-- Header -->
     <div class="header-section w3-center w3-card w3-round-large" style="width: 60%; display: flex; justify-content: space-between; align-items: center; padding: 10px; ">
         <div style="display: flex; align-items: center;">
@@ -50,39 +50,39 @@
         </button>
     </div>
 
-    <div class="w3-display-middle w3-card w3-round-large w3-light-grey" style="width: 58%; margin-top: 50px;">
+    <div class=" w3-card w3-round-large w3-light-grey" style="min-width: 58%; width: fit-content; margin-top: 50px;">
         <h2 class="w3-center">Liste des profils types</h2>
         <div class="w3-container w3-padding">
             <button class="w3-button w3-green w3-round w3-margin" onclick="openAdd()">Ajouter un profil</button>
             <table class="w3-table-all w3-round-large">
                 <tr>
-                    <th>Profils</th>
+                    <th>Nom Profils Types</th>
                     <th>Type</th>
-                    <th>Droits</th>
+                    <th>Droit associer</th>
                     <th>Action</th>
                 </tr>
                 <tr>
-                    <td>Profils 1</td>
-                    <td>Admin</td>
-                    <td>Acces complet</td>
+                    <td>Comptabilité</td>
+                    <td>Employer</td>
+                    <td><span class="w3-button w3-dark-grey w3-round" onclick="openDroitAssocier()">Voir les droits</span></td>
                     <td>
                         <button class="w3-button w3-dark-grey w3-round" onclick="openModif()">Modifier</button>
                         <button class="w3-button w3-red w3-round">Supprimer</button>
                     </td>
                 </tr>
                 <tr>
-                    <td>Profils 2</td>
+                    <td>Informatique</td>
+                    <td>Employer</td>
+                    <td><span class="w3-button w3-dark-grey w3-round" onclick="openDroitAssocier()">Voir les droits</span></td>
+                    <td>
+                        <button class="w3-button w3-dark-grey w3-round" onclick="openModif()">Modifier</button>
+                        <button class="w3-button w3-red w3-round">Supprimer</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ressources Humaines</td>
                     <td>Manager</td>
-                    <td>Acces modification</td>
-                    <td>
-                        <button class="w3-button w3-dark-grey w3-round" onclick="openModif()">Modifier</button>
-                        <button class="w3-button w3-red w3-round">Supprimer</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Profils 3</td>
-                    <td>Eployer</td>
-                    <td>Acces lecture</td>
+                    <td><span class="w3-button w3-dark-grey w3-round" onclick="openDroitAssocier()">Voir les droits</span></td>
                     <td>
                         <button class="w3-button w3-dark-grey w3-round" onclick="openModif()">Modifier</button>
                         <button class="w3-button w3-red w3-round">Supprimer</button>
@@ -93,6 +93,7 @@
     </div>
 </div>
 
+<!-- Ajouter profil -->
 <div id="addPopup" class="w3-modal w3-round-large" style="display:none;">
     <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-round-large">
         <header class="w3-container w3-dark-grey w3-round-large">
@@ -102,31 +103,39 @@
         <div class="w3-container">
             <form class="w3-container">
                 <div class="w3-row-padding">
+
                     <div class="w3-container w3-padding-16 w3-padding-large w3-half">
                         <label class="">Nom du profil
                             <input class="w3-input w3-animate-input w3-margin-bottom" type="text" placeholder="Nom du profil..." style="width:100%">
                         </label>
-                        <label class="">Type de profil
-                            <select class="w3-select w3-margin-bottom" name="option" id="selectPa">
-                                <option value="" disabled selected>Selectionnez type de profil</option>
-                                <option value="1">Administrateur</option>
-                                <option value="2">Manager</option>
-                                <option value="3">Employer</option>
-                            </select>
+                        <label class="w3-margin-bottom">Description du profil
+                            <input class="w3-input w3-animate-input w3-margin-bottom" type="text" placeholder="Expliquez..." style="width:100%">
                         </label>
-                    </div>
-                    <div class="w3-container w3-padding-16 w3-padding-large w3-half">
-                        <label for="selectDa">Accorder un droit</label>
-                        <select class="w3-select w3-margin-bottom" name="option" id="selectDa">
-                            <option value="" disabled selected>Selectionnez type de droit</option>
-                            <option value="1">Acces complet</option>
-                            <option value="2">Ecriture</option>
-                            <option value="3">Lecture</option>
-                        </select>
 
                         <button class="w3-btn w3-green w3-round w3-left">Ajouter</button>
                         <button class="w3-btn w3-red w3-round w3-right">Anuler</button>
                     </div>
+
+                    <div class="w3-container w3-padding-16 w3-padding-large w3-half">
+                        <label>Droits associé</label>
+                        <div class="w3-margin-bottom">
+                            <div>
+                                <input class="w3-check" type="checkbox" name="droit">
+                                <label>Suppression des equipes<button class="w3-button w3-red w3-round-large">&times;</button></label>
+                            </div>
+                            <div>
+                                <input class="w3-check" type="checkbox"  name="droit">
+                                <label>Acces au rapport d'équipe<button class="w3-button w3-red w3-round-large">&times;</button></label>
+                            </div>
+                            <div>
+                                <input class="w3-check" type="checkbox" name="droit">
+                                <label>Creation de compte<button class="w3-button w3-red w3-round-large">&times;</button></label>
+                            </div>
+                        </div>
+                        <span class="w3-btn w3-dark-grey w3-round w3-left" onclick="openListeDroits()">Ajouter un droits</span>
+
+                    </div>
+
                 </div>
             </form>
         </div>
@@ -136,6 +145,88 @@
     </div>
 </div>
 
+<!-- Liste des Droits -->
+<div id="ListeDroits" class="w3-modal w3-round-large" style="display:none;">
+    <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-round-large">
+        <header class="w3-container w3-dark-grey w3-round-large">
+            <span onclick="closeListeDroits()" class="w3-button w3-display-topright w3-round-large">&times;</span>
+            <h2>Ajouter un droit au profils</h2>
+        </header>
+        <div class="w3-container">
+            <form class="w3-container">
+                <div class="w3-row-padding">
+                    <span class="w3-button w3-green w3-round w3-margin" onclick="openAjouterUnDroitListe()">Crée un droit</span>
+                    <table class="w3-container w3-padding-16 w3-padding-large w3-half">
+                        <tr>
+                            <th>Action</th>
+                            <th>Droit</th>
+                        </tr>
+                        <tr>
+                            <td><button class="w3-button w3-green w3-round">Ajouter</button>
+                                <button class="w3-button w3-red w3-round-large">&times;</button></td>
+                            <td>Supprimer des comptes</td>
+                        </tr>
+                    </table>
+
+                </div>
+            </form>
+        </div>
+        <footer class="w3-container w3-dark-grey w3-round-large">
+            <span onclick="closeListeDroits()" class="w3-button w3-lightgreen w3-round-large">Fermer</span>
+        </footer>
+    </div>
+</div>
+
+<!-- Ajouter a la Liste des Droits -->
+<div id="AjouterDroitsListe" class="w3-modal w3-round-large" style="display:none;">
+    <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-round-large">
+        <header class="w3-container w3-dark-grey w3-round-large">
+            <span onclick="closeAjouterUnDroitListe()" class="w3-button w3-display-topright w3-round-large">&times;</span>
+            <h2>Ajouter un droit a la liste</h2>
+        </header>
+        <div class="w3-container">
+            <form class="w3-container">
+                <label for="creedroit">Droit :
+                    <input id="creedroit" type="text" class="w3-animate-input w3-margin" style="width: 80%">
+                </label>
+                <button class="w3-button w3-green w3-round-large w3-margin">Ajouter</button>
+            </form>
+        </div>
+        <footer class="w3-container w3-dark-grey w3-round-large">
+            <span onclick="closeAjouterUnDroitListe()" class="w3-button w3-lightgreen w3-round-large">Fermer</span>
+        </footer>
+    </div>
+</div>
+
+<!-- Liste des Droits -->
+<div id="DroitsAssocier" class="w3-modal w3-round-large" style="display:none;">
+    <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-round-large">
+        <header class="w3-container w3-dark-grey w3-round-large">
+            <span onclick="closeDroitAssocier()" class="w3-button w3-display-topright w3-round-large">&times;</span>
+            <h2>Ajouter un droit au profils</h2>
+        </header>
+        <div class="w3-container">
+            <form class="w3-container">
+                <div class="w3-row-padding">
+                    <table class="w3-container w3-padding-16 w3-padding-large w3-half">
+                        <tr>
+                            <th>Droit</th>
+                        </tr>
+                        <tr>
+                            <td>Acces au rapport déquipe</td>
+                        </tr>
+                    </table>
+
+                </div>
+            </form>
+        </div>
+        <footer class="w3-container w3-dark-grey w3-round-large">
+            <span onclick="closeDroitAssocier()" class="w3-button w3-lightgreen w3-round-large">Fermer</span>
+        </footer>
+    </div>
+</div>
+
+<!-- Modifier profils -->
 <div id="modificationPopup" class="w3-modal w3-round-large" style="display:none;">
     <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-round-large">
         <header class="w3-container w3-dark-grey w3-round-large">
@@ -145,31 +236,39 @@
         <div class="w3-container">
             <form class="w3-container">
                 <div class="w3-row-padding">
+
                     <div class="w3-container w3-padding-16 w3-padding-large w3-half">
                         <label class="">Nom du profil
-                            <input disabled class="w3-input w3-animate-input w3-margin-bottom" type="text" placeholder="Profil x" style="width:100%">
+                            <input class="w3-input w3-animate-input w3-margin-bottom" type="text" placeholder="Nom du profil..." value="Comptabilité" style="width:100%">
                         </label>
-                        <label class="">Type de profil
-                            <select class="w3-select w3-margin-bottom" name="option" id="selectP">
-                                <option value="" disabled selected>Selectionnez type de profil</option>
-                                <option value="1">Administrateur</option>
-                                <option value="2">Manager</option>
-                                <option value="3">Employer</option>
-                            </select>
+                        <label class="w3-margin-bottom">Description du profil
+                            <input class="w3-input w3-animate-input w3-margin-bottom" type="text" placeholder="Description..." value="Description trop bien" style="width:100%">
                         </label>
-                    </div>
-                    <div class="w3-container w3-padding-16 w3-padding-large w3-half">
-                        <label for="selectD">Accorder un droit</label>
-                        <select class="w3-select w3-margin-bottom" name="option" id="selectD">
-                            <option value="" disabled selected>Selectionnez type de droit</option>
-                            <option value="1">Acces complet</option>
-                            <option value="2">Ecriture</option>
-                            <option value="3">Lecture</option>
-                        </select>
 
                         <button class="w3-btn w3-green w3-round w3-left">Mettre à jour</button>
                         <button class="w3-btn w3-red w3-round w3-right">Anuler</button>
                     </div>
+
+                    <div class="w3-container w3-padding-16 w3-padding-large w3-half">
+                        <label>Droits associé</label>
+                        <div class="w3-margin-bottom">
+                            <div>
+                                <input class="w3-check" type="checkbox" checked="checked"  name="droit">
+                                <label>Suppression des equipes<button class="w3-button w3-red w3-round-large">&times;</button></label>
+                            </div>
+                            <div>
+                                <input class="w3-check" type="checkbox"  name="droit">
+                                <label>Acces au rapport d'équipe<button class="w3-button w3-red w3-round-large">&times;</button></label>
+                            </div>
+                            <div>
+                                <input class="w3-check" type="checkbox" name="droit">
+                                <label>Creation de compte<button class="w3-button w3-red w3-round-large">&times;</button></label>
+                            </div>
+                        </div>
+                        <span class="w3-btn w3-dark-grey w3-round w3-left" onclick="openListeDroits()">Ajouter un droits</span>
+
+                    </div>
+
                 </div>
             </form>
         </div>
@@ -243,6 +342,29 @@
 
     function closeAdd() {
         document.getElementById("addPopup").style.display = "none";
+    }
+
+    function openListeDroits() {
+        document.getElementById("ListeDroits").style.display = "block";
+    }
+
+    function closeListeDroits() {
+        document.getElementById("ListeDroits").style.display = "none";
+    }
+    function openAjouterUnDroitListe() {
+        document.getElementById("AjouterDroitsListe").style.display = "block";
+    }
+
+    function closeAjouterUnDroitListe() {
+        document.getElementById("AjouterDroitsListe").style.display = "none";
+    }
+
+    function openDroitAssocier() {
+        document.getElementById("DroitsAssocier").style.display = "block";
+    }
+
+    function closeDroitAssocier() {
+        document.getElementById("DroitsAssocier").style.display = "none";
     }
 </script>
 

@@ -49,7 +49,7 @@
   <div class=" w3-card w3-round-large" style="min-width: 60%; width: fit-content; margin-top: 50px;">
 
     <div class="w3-container w3-dark-grey w3-round-large">
-      <h2>Veuillez Completez les formulaire ci dessous</h2>
+      <h2>Veuillez Completez les formulaire ci dessous (Versoins demande de Profils type)</h2>
     </div>
 
     <form class="w3-container">
@@ -57,7 +57,21 @@
         <div class="w3-container w3-padding-16 w3-padding-large w3-half">
 
           <label>Application
-            <input class="w3-input w3-animate-input w3-margin-bottom" type="text" placeholder="app 1..." style="width:70%">
+            <select class="w3-select w3-margin-bottom" name="option">
+              <option value="" disabled selected>Selectionnez l'appli</option>
+              <option value="1">App 1</option>
+              <option value="2">App 2</option>
+              <option value="3">App 3</option>
+              <option value="4">App 4</option>
+              <option value="5">App 5</option>
+            </select>
+          </label>
+          <label>Intituler
+            <select class="w3-select w3-margin-bottom" name="option">
+              <option value="" disabled selected>Sujet</option>
+              <option value="1" disabled> Demande de droits</option>
+              <option value="2" selected>Profils types</option>
+            </select>
           </label>
           <label class="w3-margin-top">Descriptions des droits demander
             <input class="w3-input w3-animate-input w3-margin-bottom" type="text" placeholder="Expliquez pourquoi vous avez besoins de x droits" style="width:70%">
@@ -66,7 +80,7 @@
         </div>
 
         <div class="w3-container w3-padding-16 w3-padding-large w3-half">
-          <label>Type de drois souhaiter</label>
+          <label>Profils Types</label>
           <select class="w3-select w3-margin-bottom" name="option">
             <option value="" disabled selected>Selectionnez le Profil</option>
             <option value="1">Informatique</option>
@@ -81,6 +95,98 @@
       </div>
     </form>
 
+  </div>
+
+  <div class=" w3-card w3-round-large" style="min-width: 60%; width: fit-content; margin-top: 50px;">
+
+    <div class="w3-container w3-dark-grey w3-round-large">
+      <h2>Veuillez Completez les formulaire ci dessous <span class="w3-small">(Versoins demande de droit en plus d'un profils type déja demander)</span></h2>
+    </div>
+
+    <form class="w3-container">
+      <div class="w3-row-padding">
+        <div class="w3-container w3-padding-16 w3-padding-large w3-half">
+
+          <label>Application
+            <select class="w3-select w3-margin-bottom" name="option">
+              <option value="" disabled selected>Selectionnez l'appli</option>
+              <option value="1">App 1</option>
+              <option value="2">App 2</option>
+              <option value="3">App 3</option>
+              <option value="4">App 4</option>
+              <option value="5">App 5</option>
+            </select>
+          </label>
+          <label>Intituler
+            <select class="w3-select w3-margin-bottom" name="option">
+              <option value="" disabled selected>Sujet</option>
+              <option value="1" selected> Demande de droits</option>
+              <option value="2" disabled>Profils types</option>
+            </select>
+          </label>
+          <label class="w3-margin-top">Descriptions des droits demander
+            <input class="w3-input w3-animate-input w3-margin-bottom" type="text" placeholder="Expliquez pourquoi vous avez besoins de x droits" style="width:70%">
+          </label>
+
+          <button class="w3-btn w3-green w3-round">Envoyer</button>
+        </div>
+
+        <div class="w3-container w3-padding-16 w3-padding-large w3-half">
+          <label>Profils Types
+            <input disabled class="w3-input w3-animate-input w3-margin-bottom" type="text" value="Comptable" style="width:70%">
+          </label>
+
+          <label>Droits associé</label>
+          <div class="w3-margin-bottom">
+            <div>
+              <input class="w3-check" type="checkbox" name="droit">
+              <label>Suppression des equipes<button class="w3-button w3-red w3-round-large">&times;</button></label>
+            </div>
+            <div>
+              <input class="w3-check" type="checkbox"  name="droit">
+              <label>Acces au rapport d'équipe<button class="w3-button w3-red w3-round-large">&times;</button></label>
+            </div>
+            <div>
+              <input class="w3-check" type="checkbox" name="droit">
+              <label>Creation de compte<button class="w3-button w3-red w3-round-large">&times;</button></label>
+            </div>
+          </div>
+          <span onclick="openListeDroits()" class="w3-btn w3-green w3-round">Ajouter un droit</span>
+        </div>
+      </div>
+    </form>
+
+  </div>
+</div>
+
+<!-- Liste des Droits -->
+<div id="ListeDroits" class="w3-modal w3-round-large" style="display:none;">
+  <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-round-large">
+    <header class="w3-container w3-dark-grey w3-round-large">
+      <span onclick="closeListeDroits()" class="w3-button w3-display-topright w3-round-large">&times;</span>
+      <h2>Ajouter un droit au profils</h2>
+    </header>
+    <div class="w3-container">
+      <form class="w3-container">
+        <div class="w3-row-padding">
+          <table class="w3-container w3-padding-16 w3-padding-large w3-half">
+            <tr>
+              <th>Action</th>
+              <th>Droit</th>
+            </tr>
+            <tr>
+              <td><button class="w3-button w3-green w3-round">Ajouter</button>
+                <button class="w3-button w3-red w3-round-large">&times;</button></td>
+              <td>Supprimer des comptes</td>
+            </tr>
+          </table>
+
+        </div>
+      </form>
+    </div>
+    <footer class="w3-container w3-dark-grey w3-round-large">
+      <span onclick="closeListeDroits()" class="w3-button w3-lightgreen w3-round-large">Fermer</span>
+    </footer>
   </div>
 </div>
 
@@ -139,6 +245,14 @@
 
   function closePopup() {
     document.getElementById("notificationPopup").style.display = "none";
+  }
+
+  function openListeDroits() {
+    document.getElementById("ListeDroits").style.display = "block";
+  }
+
+  function closeListeDroits() {
+    document.getElementById("ListeDroits").style.display = "none";
   }
 </script>
 
