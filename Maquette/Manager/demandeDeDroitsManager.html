@@ -25,7 +25,8 @@
 
 
 <!-- Main content -->
-<div class="w3-main" style="width: 100%; display: flex; justify-content: center">
+<div class="w3-main" style="width: 100%; display: flex; align-items: center; flex-direction: column">
+
     <!-- Header -->
     <div class="header-section w3-center w3-card w3-round-large" style="width: 60%; display: flex; justify-content: space-between; align-items: center; padding: 10px; ">
         <div style="display: flex; align-items: center;">
@@ -48,24 +49,22 @@
         </button>
     </div>
 
-    <div class="w3-card-4 w3-round-large w3-light-grey w3-display-middle w3-padding-top" style="max-width: 75%;min-width: 55%;">
-        <h2 class="w3-center">Demande de droits</h2>
+    <div class="w3-card-4 w3-round-large w3-light-grey w3-padding-top" style="width: fit-content; min-width: 55%; margin-top: 5vh;">
+        <h2 class="w3-center">Demande de droits & Profils</h2>
         <div class=" w3-round-large w3-container w3-responsive">
             <table class="w3-table-all w3-round-large">
                 <tr>
                     <th>Nom de l'employer</th>
                     <th>Application</th>
                     <th>Date de la demande</th>
-                    <th>Type de droit</th>
-                    <th>Statut</th>
+                    <th>Demande</th>
                     <th>Action</th>
                 </tr>
                 <tr>
                     <td>Patrik</td>
                     <td>App Gestion</td>
                     <td>22/09/2024</td>
-                    <td>Vente</td>
-                    <td>En attente</td>
+                    <td>Profils Vente</td>
                     <td>
                         <button class="w3-button w3-green w3-round">Approuver</button>
                         <button class="w3-button w3-red w3-round">Rejeter</button>
@@ -75,8 +74,17 @@
                     <td>Christophe</td>
                     <td>App Comptable</td>
                     <td>21/09/2024</td>
-                    <td>Comptable</td>
-                    <td>En cours</td>
+                    <td>Profils Comptable</td>
+                    <td>
+                        <button class="w3-button w3-green w3-round">Approuver</button>
+                        <button class="w3-button w3-red w3-round">Rejeter</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Christophe</td>
+                    <td>App Comptable</td>
+                    <td>20/09/2024</td>
+                    <td><span onclick="openDroitDemander()" class="w3-button w3-dark-grey w3-round">Droits demander</span></td>
                     <td>
                         <button class="w3-button w3-green w3-round">Approuver</button>
                         <button class="w3-button w3-red w3-round">Rejeter</button>
@@ -84,6 +92,36 @@
                 </tr>
             </table>
         </div>
+    </div>
+</div>
+
+<div id="DroitDemander" class="w3-modal w3-round-large" style="display:none;">
+    <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-round-large">
+        <header class="w3-container w3-dark-grey">
+            <span onclick="closeDroitDemander()" class="w3-button w3-display-topright">&times;</span>
+            <h2>Droits demander par l'employer</h2>
+        </header>
+        <div class="w3-container">
+            <div class="w3-row-padding">
+                <table class="w3-container w3-padding-16 w3-padding-large">
+                    <tr>
+                        <th>Action</th>
+                        <th>Droit</th>
+                        <th>Date de révocation</th>
+                    </tr>
+                    <tr>
+                        <td><button class="w3-button w3-green w3-round">Approuver</button>
+                            <button class="w3-button w3-red w3-round-large">&times;</button></td>
+                        <td>Supprimer des comptes</td>
+                        <td><input type="date"></td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+        <footer class="w3-container w3-dark-grey">
+            <button onclick="closeDroitDemander()" class="w3-button w3-grey">Fermer</button>
+        </footer>
     </div>
 </div>
 
@@ -136,6 +174,14 @@
 
     function closePopup() {
         document.getElementById("notificationPopup").style.display = "none";
+    }
+
+    function openDroitDemander() {
+        document.getElementById("DroitDemander").style.display = "block";
+    }
+
+    function closeDroitDemander() {
+        document.getElementById("DroitDemander").style.display = "none";
     }
 </script>
 

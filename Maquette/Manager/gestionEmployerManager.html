@@ -25,7 +25,7 @@
 
 
 <!-- Main content -->
-<div class="w3-main" style="width: 100%; display: flex; justify-content: center">
+<div class="w3-main" style="width: 100%; display: flex; align-items: center; flex-direction: column">
     <!-- Header -->
     <div class="header-section w3-center w3-card w3-round-large" style="width: 60%; display: flex; justify-content: space-between; align-items: center; padding: 10px; ">
         <div style="display: flex; align-items: center;">
@@ -48,15 +48,12 @@
         </button>
     </div>
 
-    <div class="w3-card-4 w3-round-large w3-light-grey w3-display-middle w3-padding-large" style="max-width: 75%;min-width: 50%;">
+    <div class="w3-card-4 w3-round-large w3-light-grey w3-padding-large" style="width: fit-content;min-width: 50%;margin-top: 5vh;">
         <h2 class="w3-center">Employer</h2>
 
         <!-- Barre de recherche au-dessus -->
         <div class="w3-container w3-padding">
-            <label for="searchInput"></label><input class="w3-input w3-border w3-round" type="text" placeholder="Rechercher par nom ou email..." id="searchInput" onkeyup="function searchApp() {
-
-            }
-            searchApp()">
+            <label for="searchInput"></label><input class="w3-input w3-border w3-round" type="text" placeholder="Rechercher par nom ou email..." id="searchInput"">
         </div>
 
         <div class=" w3-round-large w3-container w3-responsive">
@@ -65,31 +62,32 @@
                     <th>Nom</th>
                     <th>Poste</th>
                     <th>Application</th>
-                    <th>droits</th>
+                    <th>Profils types & Droits</th>
                     <th>Action</th>
                 </tr>
                 <tr>
                     <td>Patrik</td>
                     <td>Comptable</td>
                     <td>5</td>
-                    <td>Acces modification</td>
-                    <td><button class="w3-button w3-dark-grey w3-round" onclick="openModif()">Modifier</button></td>
+                    <td style="display: flex; justify-content: center"><span class="w3-button w3-dark-grey w3-round" style="width: 80%" onclick="openVoirEmployer()">voir</span></td>
+                    <td><span class="w3-button w3-green w3-round" style="min-width: fit-content" onclick="openModif()">Modifier</span></td>
                 </tr>
                 <tr>
                     <td>Lina</td>
                     <td>Developpeuse</td>
                     <td>10</td>
-                    <td>Acces complet</td>
-                    <td><button class="w3-button w3-dark-grey w3-round">Modifier</button></td>
+                    <td style="display: flex; justify-content: center"><span class="w3-button w3-dark-grey w3-round" style="width: 80%">voir</span></td>
+                    <td><span class="w3-button w3-green w3-round" style="min-width: fit-content">Modifier</span></td>
                 </tr>
             </table>
         </div>
     </div>
 </div>
 
+<!-- Modifier Employer -->
 <div id="modificationPopup" class="w3-modal w3-round-large" style="display:none;">
     <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-round-large">
-        <header class="w3-container w3-green w3-round-large">
+        <header class="w3-container w3-dark-grey w3-round-large">
             <span onclick="closeModif()" class="w3-button w3-display-topright w3-round-large">&times;</span>
             <h2>Détails de l'employer</h2>
         </header>
@@ -106,35 +104,151 @@
                         <label class="">Email
                             <input disabled class="w3-input w3-animate-input w3-margin-bottom" type="email" placeholder="patrik@gmail.com" style="width:100%">
                         </label>
-                    </div>
-                    <div class="w3-container w3-padding-16 w3-padding-large w3-half">
-                        <label for="select">Accorder un droit</label>
-                        <select class="w3-select w3-margin-bottom" name="option" id="select">
-                            <option value="" disabled selected>Selectionnez type de droit</option>
-                            <option value="1">Acces complet</option>
-                            <option value="2">Ecriture</option>
-                            <option value="3">Lecture</option>
-                        </select>
-
-                        <label class="w3-margin-top">Date de révocation
-                        <input type="date" class="w3-margin-bottom"></label>
-
                         <button class="w3-btn w3-green w3-round w3-left">Mettre à jour</button>
                         <button class="w3-btn w3-red w3-round w3-right">Anuler</button>
+                    </div>
+                    <div class="w3-container w3-padding-16 w3-padding-large w3-half">
+                        <label for="selectProfils">Changer le Profils</label>
+                        <select id="selectProfils" class="w3-select w3-margin-bottom" name="option">
+                            <option value="1">Informatique</option>
+                            <option selected value="2">Marketing</option>
+                            <option value="3">Vente</option>
+                            <option value="4">RH</option>
+                            <option value="5">Comptable</option>
+                        </select>
+
+                        <label>Droits additionel</label>
+                        <div class="w3-margin-bottom w3-margin-left">
+                            <div>
+                                <input class="w3-check" type="checkbox" checked="checked"  name="droit">
+                                <label>Suppression des equipes<span class="w3-button w3-red w3-round-large">&times;</span></label>
+                                <div>
+                                <label class="w3-margin-top">Date de révocation
+                                    <input value="2025-04-18" type="date" class="w3-margin-bottom"></label>
+                                </div>
+                            </div>
+                            <div>
+                                <input class="w3-check" type="checkbox"  name="droit">
+                                <label>Acces au rapport d'équipe<span class="w3-button w3-red w3-round-large">&times;</span></label>
+                                <div>
+                                    <label class="w3-margin-top">Date de révocation
+                                        <input value="2025-05-18" type="date" class="w3-margin-bottom"></label>
+                                </div>
+                            </div>
+                            <div>
+                                <input class="w3-check" type="checkbox" name="droit">
+                                <label>Creation de compte<span class="w3-button w3-red w3-round-large">&times;</span></label>
+                                <div>
+                                    <label class="w3-margin-top">Date de révocation
+                                        <input value="2025-04-18" type="date" class="w3-margin-bottom"></label>
+                                </div>
+                            </div>
+                            <span class="w3-button w3-green w3-round-large" onclick="openListeDroits()">Ajouter droits</span>
+                        </div>
                     </div>
                 </div>
             </form>
         </div>
-        <footer class="w3-container w3-green w3-round-large">
-            <button onclick="closeModif()" class="w3-button w3-lightgreen w3-round-large">Fermer</button>
+        <footer class="w3-container w3-dark-grey w3-round-large">
+            <button onclick="closeModif()" class="w3-button w3-grey w3-round-large">Fermer</button>
         </footer>
     </div>
 </div>
 
-<!-- Popup -->
+<!-- Liste des Droits -->
+<div id="ListeDroits" class="w3-modal w3-round-large" style="display:none;">
+    <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-round-large">
+        <header class="w3-container w3-dark-grey w3-round-large">
+            <span onclick="closeListeDroits()" class="w3-button w3-display-topright w3-round-large">&times;</span>
+            <h2>Ajouter un droit au profils</h2>
+        </header>
+        <div class="w3-container">
+            <form class="w3-container">
+                <div class="w3-row-padding">
+                    <table class="w3-container w3-padding-16 w3-padding-large w3-half">
+                        <tr>
+                            <th>Action</th>
+                            <th>Droit</th>
+                        </tr>
+                        <tr>
+                            <td><button class="w3-button w3-green w3-round">Ajouter</button>
+                                <button class="w3-button w3-red w3-round-large">&times;</button></td>
+                            <td>Supprimer des comptes</td>
+                        </tr>
+                    </table>
+
+                </div>
+            </form>
+        </div>
+        <footer class="w3-container w3-dark-grey w3-round-large">
+            <span onclick="closeListeDroits()" class="w3-button w3-lightgreen w3-round-large">Fermer</span>
+        </footer>
+    </div>
+</div>
+
+<!-- voir P&d -->
+<div id="VoirPetD" class="w3-modal w3-round-large" style="display:none;">
+    <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-round-large">
+        <header class="w3-container w3-dark-grey w3-round-large">
+            <span onclick="closeVoirEmployer()" class="w3-button w3-display-topright w3-round-large">&times;</span>
+            <h2>Détails de l'employer</h2>
+        </header>
+        <div class="w3-container">
+            <form class="w3-container">
+                <div class="w3-row-padding">
+                    <div class="w3-container w3-padding-16 w3-padding-large ">
+                        <div class="w3-container">
+                            <div class="w3-half">
+                                <label>Profils Types</label>
+                                <input disabled class="w3-input w3-animate-input w3-margin-bottom" type="text" value="Marketing" style="width:100%">
+                            </div>
+                            <div class="w3-half">
+                                <span class="w3-button w3-green w3-round-large" onclick="closeVoiretOpenModif()">Modifier</span>
+                            </div>
+                        </div>
+
+
+                        <label>Droits additionel</label>
+                        <div class="w3-margin-bottom w3-margin-left">
+                            <div>
+                                <input disabled class="w3-check" type="checkbox" checked="checked"  name="droit">
+                                <label>Suppression des equipes</label>
+                                <div>
+                                    <label class="w3-margin-top">Date de révocation
+                                        <input disabled value="2025-04-18" type="date" class="w3-margin-bottom"></label>
+                                </div>
+                            </div>
+                            <div>
+                                <input disabled class="w3-check" type="checkbox"  name="droit">
+                                <label>Acces au rapport d'équipe</label>
+                                <div>
+                                    <label class="w3-margin-top">Date de révocation
+                                        <input disabled value="2025-05-18" type="date" class="w3-margin-bottom"></label>
+                                </div>
+                            </div>
+                            <div>
+                                <input disabled class="w3-check" type="checkbox" name="droit">
+                                <label>Creation de compte</label>
+                                <div>
+                                    <label class="w3-margin-top">Date de révocation
+                                        <input disabled value="2025-04-18" type="date" class="w3-margin-bottom"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <footer class="w3-container w3-dark-grey w3-round-large">
+            <button onclick="closeVoirEmployer()" class="w3-button w3-grey w3-round-large">Fermer</button>
+        </footer>
+    </div>
+</div>
+
+<!-- Notifs -->
 <div id="notificationPopup" class="w3-modal w3-round-large" style="display:none;">
     <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-round-large">
-        <header class="w3-container w3-green">
+        <header class="w3-container w3-dark-grey w3-round-large">
             <span onclick="closePopup()" class="w3-button w3-display-topright">&times;</span>
             <h2>Notifications</h2>
         </header>
@@ -159,7 +273,7 @@
                 </div>
             </div>
         </div>
-        <footer class="w3-container w3-green">
+        <footer class="w3-container w3-dark-grey w3-round-large">
             <button onclick="closePopup()" class="w3-button w3-lightgreen">Fermer</button>
         </footer>
     </div>
@@ -189,6 +303,25 @@
     function closeModif() {
         document.getElementById("modificationPopup").style.display = "none";
     }
+    function openVoirEmployer() {
+        document.getElementById("VoirPetD").style.display = "block";
+    }
+
+    function closeVoirEmployer() {
+        document.getElementById("VoirPetD").style.display = "none";
+    }
+    function closeVoiretOpenModif() {
+        closeVoirEmployer();
+        openModif();
+    }
+    function openListeDroits() {
+        document.getElementById("ListeDroits").style.display = "block";
+    }
+
+    function closeListeDroits() {
+        document.getElementById("ListeDroits").style.display = "none";
+    }
+
 </script>
 
 </body>
