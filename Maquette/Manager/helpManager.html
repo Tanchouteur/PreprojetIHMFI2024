@@ -26,6 +26,7 @@
 
 <!-- Main content -->
 <div class="w3-main" style="width: 100%; display: flex; justify-content: center">
+
     <!-- Header -->
     <div class="header-section w3-center w3-card w3-round-large" style="width: 60%; display: flex; justify-content: space-between; align-items: center; padding: 10px; ">
         <div style="display: flex; align-items: center;">
@@ -51,38 +52,46 @@
         <p class="w3-center">On vous aide bien</p>
 
     </div>
+
 </div>
 
 <!-- Notif -->
 <div id="notificationPopup" class="w3-modal w3-round-large" style="display:none;">
-    <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-round-large">
-        <header class="w3-container w3-dark-grey">
-            <span onclick="closePopup()" class="w3-button w3-display-topright">&times;</span>
+    <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-round-large" style="min-width: 55%; width: fit-content; max-width: 85%; max-height: 85vh;">
+        <header class="w3-container w3-dark-grey w3-round-large">
+            <span onclick="closePopup()" class="w3-button w3-display-topright w3-round-large">&times;</span>
             <h2>Notifications</h2>
         </header>
-        <div class="w3-container">
-            <p>Voici vos notifications :</p>
-            <div class="w3-panel w3-center w3-border-blue w3-border w3-round-xlarge w3-margin-bottom">
-                <h3 class="w3-color-blue" >Demande d'acces</h3>
-                <div class="">
-                    <p class="w3-left">App 1</p><p class="w3-right">22/09/2024</p>
-                </div>
+        <div class="w3-container w3-card w3-margin w3-light-grey w3-round-large" >
+
+            <div class="w3-container w3-padding:16px w3-white w3-margin-bottom w3-round-large">
+                <h2 class="w3-dark-grey w3-round-large w3-padding" style="min-width: 60%; width: fit-content; max-width: 90%">Demandes d'Accès</h2>
+                <ul class="w3-ul">
+                    <li>Alphonse Martin a demandé l'accès à l'Application de Gestion <span class="w3-right">22/09/2024</span></li>
+                    <li>Brigitte Dupuis a demandé l'accès à l'Application de Comptabilité <span class="w3-right">21/09/2024</span></li>
+                </ul>
             </div>
-            <div class="w3-panel w3-center w3-border-green w3-border w3-round-xlarge w3-margin-bottom">
-                <h3 style="" >Approbation</h3>
-                <div class="">
-                    <p class="w3-left">App 1</p><p class="w3-right">23/09/2024</p>
-                </div>
+
+
+            <div class="w3-container w3-padding:16px w3-white w3-margin-bottom w3-round-large">
+                <h2><span  class="w3-green w3-round-large w3-padding" style="width: fit-content"> Approbations</span> / <span class="w3-red w3-round-large w3-padding" style="width: fit-content"> Reject</span></h2>
+                <ul class="w3-ul">
+                    <li>Demande de droits pour l'Application de Gestion approuvée pour Alphonse Martin <span class="w3-right">23/09/2024</span></li>
+                    <li>Demande de droits pour l'Application de Comptabilité rejetée pour Brigitte Dupuis <span class="w3-right">23/09/2024</span></li>
+                </ul>
             </div>
-            <div class="w3-panel w3-center w3-border-orange w3-border w3-round-xlarge w3-margin-bottom">
-                <h3 style="" >Rapelle de révocation</h3>
-                <div class="">
-                    <p class="w3-left">App 1</p><p class="w3-right">24/09/2024</p>
-                </div>
+
+
+            <div class="w3-container w3-padding:16px w3-white w3-margin-bottom">
+                <h2 class="w3-orange w3-text-white w3-round-large w3-padding" style="min-width: 60%; width: fit-content; max-width: 90%">Rappels de Révocation</h2>
+                <ul class="w3-ul">
+                    <li>Droits d'accès à l'Application RH révoqués pour Tom Bernard <span class="w3-right">20/09/2024</span></li>
+                    <li>Révocation à venir pour l'Application de Comptabilité pour Sandrine Dupont <span class="w3-right">30/09/2024</span></li>
+                </ul>
             </div>
         </div>
-        <footer class="w3-container w3-dark-grey">
-            <button onclick="closePopup()" class="w3-button w3-grey">Fermer</button>
+        <footer class="w3-container w3-dark-grey w3-round-large">
+            <button onclick="closePopup()" class="w3-button w3-grey w3-round-large">Fermer</button>
         </footer>
     </div>
 </div>
